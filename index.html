@@ -35,7 +35,7 @@
       <nav>
         <div class="row">
             <div class="col-xs-3 col-sm-1">
-                <a href="https://github.com/jkachurek" target="_blank"><img src="/Content/images/github-logo.svg" height="35" width="35" class="bottom-spacing svg-logo"></a>
+                <a href="https://github.com/jkachurek" target="_blank"><img src="/Content/images/github-logo.svg" height="35" width="35" class="bottom-spacing" id="github-logo"></a>
             </div>
             <div class="col-xs-3 col-sm-1">
                 <a href="https://www.linkedin.com/in/john-kachurek" target="_blank"><img src="/Content/images/linkedin-logo.svg" height="35" width="35" class="bottom-spacing svg-logo"></a>
@@ -200,10 +200,7 @@
       var titleColor = randomColor({luminosity: 'dark'});
       $('#nameTitle').css({"color":titleColor});
       $('#subtitle').css({"color":titleColor});
-      $('.svg-logo').each(function(){
-        var rColor = randomColor();
-        $(this).css({"fill":rColor});
-      });
+      $('#github-logo').css({"fill":titleColor});
     </script>
 </body>
 </html>
