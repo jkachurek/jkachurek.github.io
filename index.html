@@ -50,7 +50,7 @@
                 <a href="Projects.html" class="btn btn-primary">Projects</a>
             </div-->
             <div class="col-xs-6 col-sm-2">
-                <a href="/Content/media/KachurekResume.pdf" target="_blank" class="btn btn-primary">Download Resume</a>
+                <a href="/Content/media/KachurekResume.pdf" target="_blank" class="btn btn-primary" id="resumeButton">Download Resume</a>
             </div>
         </div>
       </nav>
@@ -200,7 +200,7 @@
       var titleColor = randomColor({luminosity: 'dark'});
       $('#nameTitle').css({"color":titleColor});
       $('#subtitle').css({"color":titleColor});
-      $('.svg-logo').css({"fill":randomColor({format:'rgb'})});
+      $('#resumeButton').css({"color":randomColor({luminosity: 'dark'})})
     </script>
 </body>
 </html>
