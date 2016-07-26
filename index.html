@@ -34,16 +34,16 @@
       <nav>
         <div class="row">
             <div class="col-xs-3 col-sm-1">
-                <a href="https://github.com/jkachurek" target="_blank"><img src="/Content/images/github-logo.svg" height="35" width="35" class="bottom-spacing"></a>
+                <a href="https://github.com/jkachurek" target="_blank"><img src="/Content/images/github-logo.svg" height="35" width="35" class="bottom-spacing svg-logo"></a>
             </div>
             <div class="col-xs-3 col-sm-1">
-                <a href="https://www.linkedin.com/in/john-kachurek" target="_blank"><img src="/Content/images/linkedin-logo.svg" height="35" width="35" class="bottom-spacing"></a>
+                <a href="https://www.linkedin.com/in/john-kachurek" target="_blank"><img src="/Content/images/linkedin-logo.svg" height="35" width="35" class="bottom-spacing svg-logo"></a>
             </div>
             <div class="col-xs-3 col-sm-1">
-                <a href="http://stackoverflow.com/users/6599088/jkachurek" target="_blank"><img src="/Content/images/stackoverflow.svg" height="35" width="35" class="bottom-spacing"></a>
+                <a href="http://stackoverflow.com/users/6599088/jkachurek" target="_blank"><img src="/Content/images/stackoverflow.svg" height="35" width="35" class="bottom-spacing svg-logo"></a>
             </div>
             <div class="col-xs-3 col-sm-1">
-                <a href="mailto:john.kachurek@gmail.com" target="_blank"><img src="/Content/images/close-envelope.svg" height="35" width="35" class="bottom-spacing"></a>
+                <a href="mailto:john.kachurek@gmail.com" target="_blank"><img src="/Content/images/close-envelope.svg" height="35" width="35" class="bottom-spacing svg-logo"></a>
             </div>
             <!--div class="col-xs-6 col-sm-2">
                 <a href="Projects.html" class="btn btn-primary">Projects</a>
@@ -57,7 +57,7 @@
             <div class="row">
                 <div class="col-xs-1"></div>
                 <div class="col-xs-3">
-                    <img src="/Content/images/wrench.svg" class="img-responsive content-center" width="75" height="75" />
+                    <img src="/Content/images/wrench.svg" class="img-responsive content-center svg-logo" width="75" height="75" />
                 </div>
                 <div class="col-xs-8">
                     <h4 class="font-montserrat-bold">Skills</h4>
@@ -70,7 +70,7 @@
             <div class="row">
                 <div class="col-xs-1"></div>
                 <div class="col-xs-3">
-                    <img src="/Content/images/briefcase.svg" class="img-responsive content-center" width="75" height="75" />
+                    <img src="/Content/images/briefcase.svg" class="img-responsive content-center svg-logo" width="75" height="75" />
                 </div>
                 <div class="col-xs-8">
                     <h4 class="font-montserrat-bold">Experience</h4>
@@ -137,7 +137,7 @@
             <div class="row">
                 <div class="col-xs-1"></div>
                 <div class="col-xs-3">
-                    <img src="/Content/images/mortarboard.svg" class="img-responsive content-center" width="75" height="75" />
+                    <img src="/Content/images/mortarboard.svg" class="img-responsive content-center svg-logo" width="75" height="75" />
                 </div>
                 <div class="col-xs-8">
                     <h4 class="font-montserrat-bold">Education</h4>
@@ -163,7 +163,7 @@
             <div class="row">
                 <div class="col-xs-1"></div>
                 <div class="col-xs-3">
-                    <img src="/Content/images/bullhorn.svg" class="img-responsive content-center" width="75" height="75" />
+                    <img src="/Content/images/bullhorn.svg" class="img-responsive content-center svg-logo" width="75" height="75" />
                 </div>
                 <div class="col-xs-8">
                     <h4 class="font-montserrat-bold">Engagement</h4>
@@ -193,6 +193,13 @@
     <script type="text/javascript">
       $('#nameTitle').fitText(0.9);
       $('#subtitle').fitText(1.75);
+    </script>
+    <script src="/scripts/randomColor.js"></script>
+    <script type="text/javascript">
+      var titleColor = randomColor();
+      $('#nameTitle').style.color = titleColor;
+      $('#subtitle').style.color = titleColor;
+      $('.svg-logo').style.background = randomColor();
     </script>
 </body>
 </html>
