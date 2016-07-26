@@ -200,10 +200,7 @@
       var titleColor = randomColor({luminosity: 'dark'});
       $('#nameTitle').css({"color":titleColor});
       $('#subtitle').css({"color":titleColor});
-      $('.svg-logo').each(function(){
-        var rColor = randomColor({luminosity: 'dark', format: 'rgb'});
-        $(this).css({"fill":rColor});
-      });
+      $('.svg-logo').css({"fill":randomColor({format:'rgb'})});
     </script>
 </body>
 </html>
