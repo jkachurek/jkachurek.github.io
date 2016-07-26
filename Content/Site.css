@@ -1,9 +1,10 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color: #CCC;
+    /*background-color: #CCC;*/
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+    color: black;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -65,16 +66,10 @@ textarea {
 }
 
 .font-display {
-    /*font-size: 350%;*/
-    /*font-family: 'Montserrat', sans-serif;*/
     font-family: 'Bungee Shade', cursive;
 }
 
 .font-text {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    /*font-family: 'Roboto', sans-serif;*/
-    /*font-family: 'Roboto Slab', serif;*/
-    /*font-family: 'Bungee Shade', cursive;
-    font-family: 'Bungee', cursive;*/
 }
