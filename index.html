@@ -201,7 +201,8 @@
       $('#nameTitle').css({"color":titleColor});
       $('#subtitle').css({"color":titleColor});
       $('.svg-logo').each(function(i, obj){
-        obj.css({"fill":randomColor()});
+        var rColor = randomColor();
+        obj.css({"fill":rColor});
       });
     </script>
 </body>
