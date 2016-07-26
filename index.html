@@ -202,7 +202,8 @@
       $('#subtitle').css({"color":titleColor});
       var icons = document.querySelectorAll('.svg-logo');
       for(icon in icons){
-        icon.style.color = randomColor();
+        var rColor = randomColor();
+        icon.css({"fill":rColor});
       }
     </script>
 </body>
