@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Montserrat:700,400|Roboto|Roboto+Slab" rel="stylesheet">
     <script src="/scripts/modernizr-2.6.2.js"></script>
 </head>
-<body>
+<body data-vide-bg="/Content/video/snowbg2">
     <div class="container">
       <header>
         <div class="row">
@@ -49,8 +49,7 @@
                 <a href="Projects.html" class="btn btn-primary">Projects</a>
             </div-->
             <div class="col-xs-6 col-sm-2">
-                @* todo: link to a pdf of my resume, without any specific contact info *@
-                <a href="" class="btn btn-primary">Download Resume</a>
+                <a href="/Content/media/KachurekResume.pdf" class="btn btn-primary">Download Resume</a>
             </div>
         </div>
       </nav>
@@ -64,7 +63,7 @@
                     <h4 class="font-montserrat-bold">Skills</h4>
                     <p>Languages: C#, HTML, JavaScript, CSS, SQL</p>
                     <p>Frameworks: .NET, Bootstrap, jQuery, AngularJS, MVC5, Ninject, NUnit</p>
-                    <p>Development Tools: Visual Studio 2015, Git, Agile Development Tools, Node.js, MySQL Workbench</p>
+                    <p>Development Tools: Visual Studio 2015, Git, Agile Project Management, Node.js, MySQL Workbench</p>
                 </div>
             </div>
             <div class="div-spacing"></div>
@@ -75,16 +74,62 @@
                 </div>
                 <div class="col-xs-8">
                     <h4 class="font-montserrat-bold">Experience</h4>
-                    <p>.NET/C# Apprentice<br />The Software Guild</p>
+                    <p>
+                      .NET/C# Apprentice<br />
+                      The Software Guild<br />
+                      May 2016 &emdash; August 2016
+                    </p>
                     <ul>
                         <li>
                             Learned a variety of practical skills for modern software development through
                             an intensive program led by industry professionals.
                         </li>
                         <li>
-                            In addition to languages andframeworks, I learned industry-standard tools and
+                            In addition to languages and frameworks, I learned industry-standard tools and
                             practices, like Agile project management, Test-Driven Development, and more.
                         </li>
+                    </ul>
+                    <p>
+                      Trivia Host<br />
+                      Sporcle Live Trivia<br />
+                      June 2015 &emdash; Present
+                    </p>
+                    <ul>
+                        <li>
+                            Hosting weekly trivia shows around Cleveland
+                        </li>
+                    </ul>
+                    <p>
+                      Cleveland International Film Festival<br />
+                      Theater Operations Staff (Seasonal)<br />
+                      March 2016
+                    </p>
+                    <ul>
+                      <li>
+                        I assist in directing festival patrons to their destinations
+                        at the festival, assisting in scanning passes at theaters,
+                        and other general duties as assigned.
+                      </li>
+                    </ul>
+                    <p>
+                      WBWC 88.3 FM The Sting<br />
+                      Various Positions (<i>see below</i>)<br />
+                      September 2010 &emdash; May 2015
+                    </p>
+                    <ul>
+                      <li>
+                        Promotions Director, Spring 2015: Contacting venue promoters, procuring
+                        &amp; scheduling giveaways, and coordinating, conducting, &amp;
+                        producing interviews
+                      </li>
+                      <li>
+                        Production Director, Fall 2011 &emdash; Spring 2012: Managing station
+                        equipment, producing sweeps, underwritings, promos, and more for air.
+                      </li>
+                      <li>
+                        Music Director, Summer 2011: Contacting music promoters and helping decide
+                        what music was played on the station
+                      </li>
                     </ul>
                 </div>
             </div>
@@ -96,7 +141,22 @@
                 </div>
                 <div class="col-xs-8">
                     <h4 class="font-montserrat-bold">Education</h4>
-                    <p>Education</p>
+                    <p>
+                      Baldwin Wallace University, Berea, OH<br />
+                      Broadcasting &amp; Mass Communications<br />
+                      2010 &emdash; 2015
+                    </p>
+                    <ul>
+                      <li>Board Member, WBWC 88.3 FM</li>
+                      <li>Pi Lambda Phi Fraternity</li>
+                    </ul>
+                    <p>
+                      Hawken School, Gates Mills, OH<br />
+                      1996 &amp; 2010
+                    </p>
+                    <ul>
+                      <li>National Merit Scholar</li>
+                    </ul>
                 </div>
             </div>
             <div class="div-spacing"></div>
@@ -107,11 +167,18 @@
                 </div>
                 <div class="col-xs-8">
                     <h4 class="font-montserrat-bold">Engagement</h4>
-                    <p>Engagement</p>
+                    <p>
+                      Cleveland International Film Festival<br />
+                      Volunteer<br/>
+                      2014 &emdash; 2015
+                    </p>
+                    <ul>
+                      <li>
+                        Seasonal volunteer for the Film Festival. Moved up to seasonal staff after two years.
+                      </li>
+                    </ul>
                 </div>
             </div>
-
-
         <hr />
         <footer>
             <p>&copy; 2016 - John Kachurek</p>
@@ -121,6 +188,7 @@
     <script src="/scripts/bootstrap.min.js"></script>
     <script src="/scripts/waves.min.js"></script>
     <script src="/scripts/app/app-waves.js"></script>
+    <script src="/scripts/jquery.vide.min.js"></script>
     <script src="/scripts/jquery.fittext.js"></script>
     <script type="text/javascript">
       $('#nameTitle').fitText(0.9);
