@@ -196,13 +196,15 @@
       $('#subtitle').fitText(1.75);
     </script>
     <script src="/scripts/randomColor.js"></script>
-    <script type="text/javascript">
-      var titleColor = randomColor({luminosity: 'dark'});
-      $('#nameTitle').css({"color":titleColor});
-      $('#subtitle').css({"color":titleColor});
-      var buttonColor = randomColor({luminosity: 'dark'});
-      $('#resumeButton').css({"background-color":buttonColor,"border-color":buttonColor,
-                              "color":randomColor({luminosity: 'light'})})
+    <script src="/scripts/app/app-randomcolor.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-81390767-1', 'auto');
+      ga('send', 'pageview');
     </script>
 </body>
 </html>
