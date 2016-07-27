@@ -7,6 +7,7 @@
     <link href="/Content/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="/Content/Site.css" rel="stylesheet" type="text/css"/>
     <link href="/Content/slick.css" rel="stylesheet"/>
+    <link href="/Content/slick-theme.css" rel="stylesheet"/>
     <link href="/Content/waves.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Montserrat:700,400" rel="stylesheet">
     <script src="/scripts/modernizr-2.6.2.js"></script>
@@ -73,15 +74,19 @@
     </footer>
   </div>
   <!-- <script src="/scripts/jquery-1.10.2.min.js"></script> -->
-  <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+  <!-- <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script> -->
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script src="/scripts/bootstrap.min.js"></script>
   <script src="/scripts/slick.min.js"></script>
   <script>
+  $(document).ready(function(){
     $('.lazy').slick({
       lazyLoad: 'ondemand',
       slidesToShow: 3,
       slidesToScroll: 1
     });
+  });
   </script>
   <script src="/scripts/waves.min.js"></script>
   <script src="/scripts/app/app-waves.js"></script>
