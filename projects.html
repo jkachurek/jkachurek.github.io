@@ -67,11 +67,16 @@
 		</div> -->
 
     <div class="screenshots">
-      <a href="/Content/images/projects/defaultCipher.PNG">Screenshot 1</a>
-      <a href="/Content/images/projects/encryptionSample.PNG">Screenshot 2</a>
-      <a href="/Content/images/projects/messageDbSample.PNG">Screenshot 3</a>
-      <a href="/Content/images/projects/decryptionFlowSample.PNG">Screenshot 4</a>
-      <a href="/Content/images/projects/cipherDbSample.PNG">Screenshot 5</a>
+      <a href="/Content/images/projects/defaultCipher.PNG"
+         title="Default Cipher Layout">1</a>
+      <a href="/Content/images/projects/encryptionSample.PNG"
+         title="Encryption Workflow">2</a>
+      <a href="/Content/images/projects/messageDbSample.PNG"
+         title="Message Database">3</a>
+      <a href="/Content/images/projects/decryptionFlowSample.PNG"
+         title="Decryption Workflow">4</a>
+      <a href="/Content/images/projects/cipherDbSample.PNG"
+         title="Cipher Database">5</a>
     </div>
 
     <hr />
@@ -94,12 +99,25 @@
   <script src="/scripts/app/app-randomcolor.js"></script>
   <script src="/scripts/jquery.magnific-popup.min.js"></script>
   <script>
-    $(document).ready(function(){
-      $('.screenshots').magnificPopup({
-        delegate: 'a',
-        type: 'image'
-      })
+  $(document).ready(function() {
+    $('.screenshots').magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      tLoading: 'Loading image #%curr%...',
+      mainClass: 'mfp-img-mobile',
+      gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0,1]
+      },
+      image: {
+        tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+        titleSrc: function(item) {
+          return item.el.attr('title');
+        }
+      }
     });
+  });
   </script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
