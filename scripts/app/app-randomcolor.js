@@ -3,6 +3,5 @@ $(document).ready(function(){
   $('#nameTitle').css({"color":titleColor});
   $('#subtitle').css({"color":titleColor});
   var buttonColor = randomColor({luminosity: 'dark'});
-  $('.rcolor').css({"background-color":buttonColor,"border-color":buttonColor,
-                          "color":white})
+  $('.rcolor').css({"background-color":buttonColor,"border-color":buttonColor})
 })
