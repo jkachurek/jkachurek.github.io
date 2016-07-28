@@ -83,7 +83,7 @@
           View on GitHub
         </a>
       </div>
-      <div class="col-xs-6 col-sm-2 screenshots">
+      <div class="col-xs-6 col-sm-2 xFidScreenshots">
         <a href="/Content/images/projects/defaultCipher.PNG"
            title="Default Cipher Layout" class="btn btn-primary">View Screenshots</a>
         <a href="/Content/images/projects/encryptionSample.PNG"
@@ -119,7 +119,7 @@
           View on GitHub
         </a>
       </div>
-      <div class="col-xs-6 col-sm-2 screenshots">
+      <div class="col-xs-6 col-sm-2 battleshipScreenshots">
         <a href="/Content/images/projects/Battleship1.PNG"
            title="Ship Placement Workflow" class="btn btn-primary">View Screenshots</a>
         <a href="/Content/images/projects/Battleship2.PNG"
@@ -148,27 +148,7 @@
   <script src="/scripts/randomColor.js"></script>
   <script src="/scripts/app/app-randomcolor.js"></script>
   <script src="/scripts/jquery.magnific-popup.min.js"></script>
-  <script>
-  $(document).ready(function() {
-    $('.screenshots').magnificPopup({
-      delegate: 'a',
-      type: 'image',
-      tLoading: 'Loading image #%curr%...',
-      mainClass: 'mfp-img-mobile',
-      gallery: {
-        enabled: true,
-        navigateByImgClick: true,
-        preload: [0,1]
-      },
-      image: {
-        tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-        titleSrc: function(item) {
-          return item.el.attr('title');
-        }
-      }
-    });
-  });
-  </script>
+  <script src="/scripts/app/screenshots.js"></script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
