@@ -14,9 +14,12 @@
 }
 
 .content-center {
-    padding-top: 15px;
     display: block;
     margin: 0 auto;
+}
+
+.top-padding{
+  padding-top: 15px;
 }
 
 .btn-primary {
