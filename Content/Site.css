@@ -21,8 +21,12 @@
 
 .btn-primary {
     background-color: #008080;
-    border-color: #000000;
+    border-color: #222;
     color: #DDDDDD;
+}
+
+.screenshot-border{
+  border: 3px solid #222
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
