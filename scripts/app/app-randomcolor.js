@@ -4,5 +4,5 @@ $(document).ready(function(){
   $('#subtitle').css({"color":titleColor});
   var buttonColor = randomColor({luminosity: 'dark'});
   $('.rcolor').css({"background-color":buttonColor,"border-color":buttonColor,
-                          "color":randomColor({luminosity: 'light'})})
+                          "color":randomColor({hue: 'monochrome', luminosity: 'light'})})
 })
