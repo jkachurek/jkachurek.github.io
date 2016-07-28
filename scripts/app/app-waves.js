@@ -1,2 +1,4 @@
-﻿Waves.attach('.btn', ['waves-float']);
-Waves.init();
+$(document).ready(function(){
+  Waves.attach('.btn', ['waves-float']);
+  Waves.init();
+})
