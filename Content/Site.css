@@ -5,6 +5,7 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     color: black;
+    background-attachment: fixed;
 }
 
 /* Set padding to keep content from hitting the edges */
