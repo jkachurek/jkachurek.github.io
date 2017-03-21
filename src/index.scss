@@ -1,0 +1,83 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #CCC;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: black;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.content-center {
+    display: block;
+    margin: 0 auto;
+}
+
+.top-padding{
+  padding-top: 15px;
+}
+
+.btn-primary {
+    background-color: #008080;
+    border-color: #222;
+    color: #DDDDDD;
+}
+
+.black-border{
+  border: 3px solid #222
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.border {
+    border-style: solid;
+    border-color: #222222;
+    border-width: 4px;
+}
+
+.spacer-30 {
+    height: 30px;
+}
+
+.bottom-spacing {
+    margin-bottom: 10px;
+}
+
+.col-centered {
+    display:inline-flex;
+    float:none;
+    text-align:left;
+    margin-right:-4px;
+}
+
+.font-bungee {
+    font-family: 'Bungee', cursive;
+}
+
+.font-bungee-shade {
+    font-family: 'Bungee Shade', cursive;
+}
+
+.font-montserrat-bold {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.font-display {
+    font-family: 'Bungee Shade', cursive;
+}
+
+.font-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}

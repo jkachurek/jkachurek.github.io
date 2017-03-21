@@ -1,0 +1,10 @@
+<div class="panel panel-default">
+	<div class="panel-heading category-header" ng-click="$ctrl.show = !$ctrl.show">
+		<h2 class="font-montserrat-bold panel-title">{{$ctrl.category}}</h2>
+	</div>
+	<div class="panel-body" ng-show="$ctrl.show">
+		<div class="panel-group">
+			<skill-panel ng-repeat="skill in $ctrl.skills" skill="skill"></skill-panel>
+		</div>
+	</div>
+</div>
