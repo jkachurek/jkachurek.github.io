@@ -1,6 +1,9 @@
 .header-display {
-  font-family: 'Bungee Shade', cursive;
-  font-size: 4em; }
+  font-family: 'Bungee Shade', cursive; }
+  .header-display .large-txt {
+    font-size: 4em; }
+  .header-display .small-txt {
+    font-size: 3.2em; }
 
 .header-well {
   background-color: #326149;
@@ -18,18 +21,22 @@
   width: 35px; }
 
 .active-color, .active-color:focus, .active-color:hover {
-  background-color: #488c6a !important;
+  background-color: #326149 !important;
   color: #CCC; }
 .footer-text {
   font-size: 0.9em;
   text-align: center; }
-.experience-header {
-  cursor: pointer; }
-
-.experience-section-header-text {
+.experience-section-header {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  text-align: center; }
+  text-align: center;
+  font-weight: bold;
+  padding: 10px; }
+  .experience-section-header .pointer {
+    cursor: pointer; }
+  .experience-section-header .small {
+    font-size: 1.1em; }
+  .experience-section-header .large {
+    font-size: 1.9em; }
 
 .bottom-spacing {
   margin-bottom: 10px; }
@@ -50,6 +57,10 @@ body {
   font-weight: 400;
   color: black; }
 
+.ui-view {
+  margin-left: 10px;
+  margin-right: 10px; }
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
   padding-left: 15px;
@@ -63,9 +74,9 @@ body {
   padding-top: 15px; }
 
 .btn-primary {
-  background-color: #008080;
+  background-color: #326149;
   border-color: #222;
-  color: #DDDDDD; }
+  color: lightgrey; }
 
 .black-border {
   border: 3px solid #222; }
