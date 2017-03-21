@@ -1,15 +1,22 @@
-<div class="row" ng-repeat="proj in $ctrl.projects">
-	<div class="col-xs-12 col-sm-4">
-		<img ng-show="proj.images.length" ng-src="{{proj.images[0]}}" class="img-responsive img-rounded content-centered black-border"/>
-	</div>
-	<div class="col-xs-12 col-sm-8">
-		<h4 class="font-montserrat-bold">{{proj.title}}</h4>
-		<p>{{proj.description}}</p>
-		<div class="col-xs-6 col-sm-4 col-md-3">
-			<a ng-href="{{proj.link}}" target="_blank" class="btn btn-primary rcolor">View Project</a>
-		</div>
-		<div class="col-xs-6 col-sm-4 col-md-3">
-			<a class="btn btn-primary rcolor">View Screenshots</a>
+<div class="row">
+	<div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 col-xs-12">
+		<div class="row" ng-repeat="proj in $ctrl.projects">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<strong class="panel-title">{{proj.title}}</strong>
+				</div>
+				<div class="panel-body">
+					<p>{{proj.description}}</p>
+					<div class="row">
+						<div ng-show="proj.link" class="col-xs-6 col-sm-4 col-md-3">
+							<a ng-href="{{proj.link}}" target="_blank" class="btn btn-primary">View Project</a>
+						</div>
+						<div ng-show="proj.images.length" class="col-xs-6 col-sm-4 col-md-3">
+							<a class="btn btn-primary">View Screenshots</a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

@@ -13,9 +13,10 @@ function ResumeController() {
 	ctrl.$onInit = () => {
 		ctrl.sections = [
 				new ResumeSection('Work', 'static/images/briefcase.svg', ResumeData.Work),
-				new ResumeSection('Education', 'static/images/mortarboard.svg', ResumeData.Education),
-				new ResumeSection('Engagement', 'static/images/bullhorn.svg', ResumeData.Engagement)
+				new ResumeSection('Engagement', 'static/images/bullhorn.svg', ResumeData.Engagement),
+				new ResumeSection('Education', 'static/images/mortarboard.svg', ResumeData.Education)
 			];
+		ctrl.activeSection = ctrl.sections[0];
 	}
 }
 

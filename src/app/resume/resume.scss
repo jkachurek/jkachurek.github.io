@@ -1,11 +1,19 @@
-.experience-header {
-    cursor: pointer;
-}
 
-.experience-section-header-text {
+.experience-section-header {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
     text-align: center;
+    font-weight: bold;
+    padding: 10px;
+
+    .pointer {
+        cursor: pointer;
+    }
+    .small {
+        font-size: 1.1em;
+    }
+    .large {
+        font-size: 1.9em;
+    }
 }
 
 .bottom-spacing {

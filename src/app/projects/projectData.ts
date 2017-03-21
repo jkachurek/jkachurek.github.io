@@ -1,12 +1,12 @@
 import ProjectModel from './projectModel';
 
 export const ProjectData: ProjectModel[] = [
-	new ProjectModel('Cult Simulator',
-		'Winter 2016-2017',
-		'A browser-based incremental game created from scratch with TypeScript.',
-		'',
-		[]
-	),
+	// new ProjectModel('Cult Simulator',
+	// 	'Winter 2016-2017',
+	// 	'A browser-based incremental game created from scratch with TypeScript.',
+	// 	'',
+	// 	[]
+	// ),
 	new ProjectModel('Synth Wave Rider',
 		'January 2017',
 		`A simple, rhythm-based game created using Unity Engine for the 2017 Global Game Jam.  I was one of two programmers, along with a 

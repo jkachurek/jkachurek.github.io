@@ -7,6 +7,11 @@ body {
     color: black;
 }
 
+.ui-view {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -23,9 +28,9 @@ body {
 }
 
 .btn-primary {
-    background-color: #008080;
+    background-color: #326149;
     border-color: #222;
-    color: #DDDDDD;
+    color: lightgrey;
 }
 
 .black-border{
