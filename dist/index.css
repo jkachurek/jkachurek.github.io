@@ -92,6 +92,15 @@ textarea {
   border-color: #222222;
   border-width: 4px; }
 
+.spacer-5 {
+  height: 5px; }
+
+.spacer-10 {
+  height: 10px; }
+
+.spacer-15 {
+  height: 15px; }
+
 .spacer-30 {
   height: 30px; }
 
