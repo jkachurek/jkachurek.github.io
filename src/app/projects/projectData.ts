@@ -39,11 +39,11 @@ export const ProjectData: ProjectModel[] = [
 		['C#', '.NET Framework'],
 		'https://github.com/jkachurek/xFid',
 		[
-			'messageDbSample.png',
-			'defaultCipher.png',
-			'encryptionSample.png',
-			'decryptionFlowSample.png',
-			'cipherDbSample.png'
+			// 'messageDbSample.png',
+			// 'defaultCipher.png',
+			// 'encryptionSample.png',
+			// 'decryptionFlowSample.png',
+			// 'cipherDbSample.png'
 		].map(s => `static/images/projects/xfid/${s}`)
 	)
 ];
