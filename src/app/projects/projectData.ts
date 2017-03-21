@@ -12,7 +12,7 @@ export const ProjectData: ProjectModel[] = [
 		`You're looking at it.  This website is built using several things, most notably Angular 1.6.x, TypeScript, SASS, Webpack,
 			& Gulp.  The site is component-based, as you can see in the source code linked below.`,
 		['Angular 1', 'TypeScript'],
-		'',
+		'https://github.com/jkachurek/jkachurek.github.io',
 		[]
 	),
 	new ProjectModel('Synth Wave Rider',
