@@ -32,22 +32,26 @@ export module SkillData {
 		)
 	];
 	export const Languages: SkillModel[] = [
+		new SkillModel('C#', 8, SkillCategories.LANGUAGE,
+			`I am very comfortable with C# for web applications and architecture.  I am still learning
+				more about using C# to develop more complex backend functionality, and to create non-web
+				applications.`
+		),
 		new SkillModel('JavaScript', 8, SkillCategories.LANGUAGE,
 			`This being the modern era, I use JavaScript daily at work and on side projects.  I am comfortable with
 				vanilla JS as well as more recent specs like ES6.  I have spent time creating several reusable bits of
 				code to extend JS's functionality, including new methods of manipulating callbacks, URL parameters,
 				object properties, and more.`
 		),
-		new SkillModel('C#', 8, SkillCategories.LANGUAGE,
-			`I am very comfortable with C# for web applications and architecture.  I am still learning
-				more about using C# to develop more complex backend functionality, and to create non-web
-				applications.`
-		),
 		new SkillModel('TypeScript', 8, SkillCategories.LANGUAGE,
 			`I have used TypeScript mostly on personal projects, including this website and the Cult Simulator.
 				TypeScript helps me organize code and enforce consistency across my applications. I find it
 				especially useful because it makes it very easy to transition a codebase into C#, for example
 				if I wanted to move a game from an HTML game to being made in Unity.`
+		),
+		new SkillModel('SQL', 5, SkillCategories.LANGUAGE,
+			`I am proficient at using SQL for basic data access purposes, but have not worked with it extensively
+				to perform complex operations and queries.`
 		)
 	];
 	export const Tools: SkillModel[] = [
@@ -56,11 +60,21 @@ export module SkillData {
 				enterprise applications.  I am comfortable with its core functionality, but have yet to explore
 				some of its deeper features, especially when you combine it with the extended functionality
 				of ReSharper.`
+		),
+		new SkillModel('Git', 8, SkillCategories.TOOL,
+			`I am very comfortable using Git for source control, whether through the command line or
+				through a Git client.  I am still very careful about doing more complex or destructive
+				operations, but I am proficient enough for using it properly in a modern development
+				environment.`
+		),
+		new SkillModel('Node', 7, SkillCategories.TOOL,
+			`I have worked with NodeJS on almost every side project I have worked on, so I am
+				very comfortable with using it to create a wide variety of applications.`
 		)
-	]
+	];
 }
 
-/** A paragraph explaining my other skills */
+/* A paragraph explaining my other skills */
 export const OtherSkills: string = `
 		In addition to the above skills, I have dabbled in several other frameworks and languages.
 		I attended a RailsBridge event, which gave me a basic understanding of Ruby and Rails. I have
