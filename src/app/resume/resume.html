@@ -1,0 +1,18 @@
+<div class="row">
+	<div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 col-xs-12">
+		<div class="row">
+			<div class="col-xs-4" ng-repeat="section in $ctrl.sections"
+					ng-click="$ctrl.activeSection = section"
+					ng-class="{'active-section': $ctrl.activeSection == section}">
+				<img ng-src="{{section.img}}" class="img-responsive content-center experience-header"
+						ng-class="{'active-section': $ctrl.activeSection == section}"
+						height="75" width="75">
+				<h3 class="experience-section-header-text hidden-xs experience-header">{{section.name}}</h3>
+				<h4 class="experience-section-header-text visible-xs-block experience-header">{{section.name}}</h4>
+			</div>
+		</div>
+		<div class="row">
+			<resume-item ng-repeat="item in $ctrl.activeSection.contents" item="item"></resume-item>
+		</div>
+	</div>
+</div>
