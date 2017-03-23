@@ -1,6 +1,6 @@
 import {SkillData, OtherSkills} from './skillData';
 import SkillModel from './skillModel';
-import * as Extensions from '../../util/Extensions';
+import * as Extensions from '../../../util/Extensions';
 
 import './skills.scss';
 
