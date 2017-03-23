@@ -52,6 +52,12 @@ export module SkillData {
 		new SkillModel('SQL', 5, SkillCategories.LANGUAGE,
 			`I am proficient at using SQL for basic data access purposes, but have not worked with it extensively
 				to perform complex operations and queries.`
+		),
+		new SkillModel('CSS', 6, SkillCategories.LANGUAGE,
+			`I am comfortable with basic CSS for web pages, and have used it throughout
+				my personal projects.  I typically use Bootstrap on sites (like this one) to speed
+				up the development process.  I am in the process of learning how to use Flexbox
+				effectively, and will try to use that once I am comfortable with it.`
 		)
 	];
 	export const Tools: SkillModel[] = [
@@ -68,8 +74,13 @@ export module SkillData {
 				environment.`
 		),
 		new SkillModel('Node', 7, SkillCategories.TOOL,
-			`I have worked with NodeJS on almost every side project I have worked on, so I am
+			`I have worked with NodeJS and NPM on almost every side project I have worked on, so I am
 				very comfortable with using it to create a wide variety of applications.`
+		),
+		new SkillModel('SQL Server Management Studio', 4, SkillCategories.TOOL,
+			`I use SSMS at work to query our databases when developing and testing web
+				applications.  I have not used many of its more robust features, but am
+				comfortable performing basic operations with it.`
 		)
 	];
 }
