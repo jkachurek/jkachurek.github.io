@@ -3,6 +3,8 @@ import 'angular-ui-router';
 
 import routesConfig from './routes';
 
+import {AppComponent} from './app/app';
+
 import {HeaderComponent} from './app/header/header';
 import {NavComponent} from './app/nav/nav';
 import {FooterComponent} from './app/footer/footer';
@@ -23,6 +25,7 @@ export const app: string = 'app';
 angular
   .module(app, ['ui.router'])
   .config(routesConfig)
+  .component('app', AppComponent)
   .component('header', HeaderComponent)
   .component('nav', NavComponent)
   .component('footer', FooterComponent)
