@@ -10,6 +10,10 @@ function routesConfig($stateProvider: angular.ui.IStateProvider, $urlRouterProvi
       url: '/',
       component: 'resume'
     })
+    .state('blog', {
+      url: '/blog',
+      component: 'blog'
+    })
     .state('projects', {
       url: '/projects',
       component: 'projects'
