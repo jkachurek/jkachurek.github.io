@@ -1,3 +1,7 @@
-<h1>{{$ctrl.header}}</h1>
-<h3>{{$ctrl.subheader}}</h3>
-<div ng-bind-html="$ctrl.body"></div>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h1 class="panel-title">{{$ctrl.header}}</h1>
+		<h3 class="panel-title" style="font-size: 1em">{{$ctrl.subheader}}</h3>		
+	</div>
+	<div class="panel-body" ng-bind-html="$ctrl.body"></div>
+</div>
