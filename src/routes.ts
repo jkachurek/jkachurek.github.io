@@ -11,7 +11,7 @@ function routesConfig($stateProvider: angular.ui.IStateProvider, $urlRouterProvi
       component: 'resume'
     })
     .state('blog', {
-      url: '/blog',
+      url: '/blog?tag',
       component: 'blog'
     })
     .state('projects', {

@@ -1,13 +1,16 @@
-import {BlogDb} from './blogData';
-import BlogPost from './BlogPost';
+import {BlogDb, BlogQueries} from './blogData';
 import * as Extensions from '../../../util/Extensions';
+
+import './blog.scss';
 
 export const BlogComponent: angular.IComponentOptions = {
 	template: require('./blog.html'),
-	controller: function() {
-		this.blogPosts = BlogDb;
-		this.recentPosts = BlogDb
-			.sort(Extensions.SortByProp('date'))
-			.slice(0, 3);
+	controller: function($stateParams: angular.ui.IStateParamsService) {
+		const ctrl = this;
+
+		ctrl.$onInit = () => {
+			this.blogPosts = BlogQueries.GetPostsByTag($stateParams['tag']);
+			this.recentPosts = BlogQueries.GetNRecentPosts(3);
+		}
 	}
 };

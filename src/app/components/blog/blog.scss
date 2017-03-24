@@ -1,0 +1,20 @@
+
+.blog-post {
+	$indent-amt: 25px;
+	p {
+		text-indent: $indent-amt;
+		text-align: justify;
+	}
+	.tag {
+		cursor: pointer;
+		font-style: italic;
+		font-size: .9em;
+	}
+	.default-img {
+		display: block;
+		border: 1px solid black;
+		border-radius: 3px;
+		margin: 5px 0px;
+		margin-left: $indent-amt;
+	}
+}

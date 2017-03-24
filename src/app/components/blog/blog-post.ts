@@ -1,12 +1,22 @@
+import {BlogPost as BlogPostModel} from './blogModels';
+
 export const BlogPost: angular.IComponentOptions = {
-	template: require('./blog-post.html'),
 	bindings: { post: '<' },
-	controller: function($sce: angular.ISCEService) {
+	template: require('./blog-post.html'),
+	controller: function($state: angular.ui.IStateService, $sce: angular.ISCEService) {
 		const ctrl = this;
 		ctrl.$onInit = () => {
-			ctrl.header = ctrl.post.title;
-			ctrl.subheader = (ctrl.post.date as Date).toLocaleDateString();
-			ctrl.body = $sce.trustAsHtml(ctrl.post.bodyContent);
+			let post = ctrl.post as BlogPostModel;
+			ctrl.header = post.title;
+			ctrl.subheader = post.date.toLocaleDateString();
+			ctrl.body = $sce.trustAsHtml(post.bodyContent);
+			ctrl.tags = post.tags;
+		};
+		ctrl.goToTag = (tag: string) => {
+			$state.go('blog', { tag: tag });
+			// filter blog posts to show only posts with this tag
 		};
 	}
 };
+// TODO: find way to display shorter version of a blog post when viewing the main blog page,
+//       then prompting visitors to click the full post.  Also pagination.
