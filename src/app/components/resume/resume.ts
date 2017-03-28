@@ -1,5 +1,5 @@
-import {ResumeData} from './resumeData';
-import Experience from './experience';
+import ResumeRepo from '../../../data/Resume';
+import Experience from '../../../models/Experience';
 
 import './resume.scss';
 
@@ -12,12 +12,12 @@ function ResumeController() {
 	const ctrl = this;
 	ctrl.$onInit = () => {
 		ctrl.sections = [
-				new ResumeSection('Work', 'static/images/briefcase.svg', ResumeData.Work),
-				new ResumeSection('Engagement', 'static/images/bullhorn.svg', ResumeData.Engagement),
-				new ResumeSection('Education', 'static/images/mortarboard.svg', ResumeData.Education)
+				new ResumeSection('Work', 'static/images/briefcase.svg', ResumeRepo.getByExpression(i => i.category === 'work')),
+				new ResumeSection('Engagement', 'static/images/bullhorn.svg', ResumeRepo.getByExpression(i => i.category === 'engagement')),
+				new ResumeSection('Education', 'static/images/mortarboard.svg', ResumeRepo.getByExpression(i => i.category === 'education'))
 			];
 		ctrl.activeSection = ctrl.sections[0];
-	}
+	};
 }
 
 class ResumeSection {

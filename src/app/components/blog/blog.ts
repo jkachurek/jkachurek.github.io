@@ -1,5 +1,5 @@
-import {BlogDb, BlogQueries} from './blogData';
-import * as Extensions from '../../../util/Extensions';
+import {SortByProp} from '../../../util/Extensions';
+import BlogRepo from '../../../data/Blog';
 
 import './blog.scss';
 
@@ -9,8 +9,10 @@ export const BlogComponent: angular.IComponentOptions = {
 		const ctrl = this;
 
 		ctrl.$onInit = () => {
-			this.blogPosts = BlogQueries.GetPostsByTag($stateParams['tag']);
-			this.recentPosts = BlogQueries.GetNRecentPosts(3);
-		}
+			this.blogPosts = $stateParams['tag']
+				? (BlogRepo.getByExpression(b => ~b.tags.indexOf($stateParams['tag'])) || BlogRepo.getAll())
+				: BlogRepo.getAll();
+			this.recentPosts = BlogRepo.getAll().sort(SortByProp('date')).slice(0, 3);
+		};
 	}
 };

@@ -1,4 +1,4 @@
-import {BlogPost as BlogPostModel} from './blogModels';
+import {BlogPost as Blog} from '../../../models/Blog';
 
 export const BlogPost: angular.IComponentOptions = {
 	bindings: { post: '<' },
@@ -6,10 +6,10 @@ export const BlogPost: angular.IComponentOptions = {
 	controller: function($state: angular.ui.IStateService, $sce: angular.ISCEService) {
 		const ctrl = this;
 		ctrl.$onInit = () => {
-			let post = ctrl.post as BlogPostModel;
+			let post = ctrl.post as Blog;
 			ctrl.header = post.title;
 			ctrl.subheader = post.date.toLocaleDateString();
-			ctrl.body = $sce.trustAsHtml(post.bodyContent);
+			ctrl.body = post.bodyTemplate;
 			ctrl.tags = post.tags;
 		};
 		ctrl.goToTag = (tag: string) => {

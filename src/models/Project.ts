@@ -8,6 +8,7 @@ export default class ProjectModel {
 		this.link = link;
 		this.images = images;
 	}
+	id: number;
 	title: string;
 	date: string;
 	description: string;

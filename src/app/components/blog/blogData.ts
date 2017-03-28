@@ -5,42 +5,42 @@ import * as Extensions from '../../../util/Extensions';
 export const BlogDb: Array<BlogPost> = [
 	new BlogPost('Building the Blog, Part 2: Dynamically Embedding Images', new Date(2017, 2, 24, 12, 0),
 		`
-<p>
-	If you didn't read the first post in my series about developing this blog section of
-	my site, check it out below.  After figuring out how to render the body content in general,
-	my focus went to figuring out how to dynamically render embedded images.  Since the body
-	content <em>is</em> technically raw html, I could theoretically hard code the images.  But
-	for the sake of making it easier to find and style images, I wanted to render them from a 
-	separate array of image sources.
-</p>
-<p>
-	My first move was to add an array of image source strings to the <code>BlogPost</code>
-	object.  I quickly realized that this would prevent me from styling images on a
-	case-by-case basis, so I created the <code>BlogImage</code> object.  All this object
-	does is render an image given a source and an object containing its other HTML
-	attributes.  This object allows me to have complete control over image display within
-	blog posts without hard-coding the images.
-</p>
-<p>
-	The next dilemma was figuring out how to parse through the body content and insert
-	these images if I am not using HTML for it.  I devised an identifier for images,
-	<code>##img[number]##</code>, where <code>[number]</code> is the index of the image
-	to be embedded.  I then came up with two methods for replacing these identifiers.
-	I liked the first method for its brevity, but I wound up using the second method for
-	its clarity.  I plan to benchmark them in the near future to see which one is
-	technically more efficient.  Even though I won't be using enough pictures ever to
-	noticeably slow things down, I would like to make sure things run as quickly as they can.
-</p>
-<p>
-	The first, shorter method I tried was the following:
-</p>
-<pre>
-this.bodyContent = this.bodyContent
-  .split(/#{2}img[0-9]*#{2}/, this.images.length + 1)
-  .reduce((prev, cur, index) => {
-    return prev + cur + ((this.images[index] && this.images[index].render()) || '') ;
-  }, '');
-</pre>
+			<p>
+				If you didn't read the first post in my series about developing this blog section of
+				my site, check it out below.  After figuring out how to render the body content in general,
+				my focus went to figuring out how to dynamically render embedded images.  Since the body
+				content <em>is</em> technically raw html, I could theoretically hard code the images.  But
+				for the sake of making it easier to find and style images, I wanted to render them from a 
+				separate array of image sources.
+			</p>
+			<p>
+				My first move was to add an array of image source strings to the <code>BlogPost</code>
+				object.  I quickly realized that this would prevent me from styling images on a
+				case-by-case basis, so I created the <code>BlogImage</code> object.  All this object
+				does is render an image given a source and an object containing its other HTML
+				attributes.  This object allows me to have complete control over image display within
+				blog posts without hard-coding the images.
+			</p>
+			<p>
+				The next dilemma was figuring out how to parse through the body content and insert
+				these images if I am not using HTML for it.  I devised an identifier for images,
+				<code>##img[number]##</code>, where <code>[number]</code> is the index of the image
+				to be embedded.  I then came up with two methods for replacing these identifiers.
+				I liked the first method for its brevity, but I wound up using the second method for
+				its clarity.  I plan to benchmark them in the near future to see which one is
+				technically more efficient.  Even though I won't be using enough pictures ever to
+				noticeably slow things down, I would like to make sure things run as quickly as they can.
+			</p>
+			<p>
+				The first, shorter method I tried was the following:
+			</p>
+			<pre>
+			this.bodyContent = this.bodyContent
+				.split(/#{2}img[0-9]*#{2}/, this.images.length + 1)
+				.reduce((prev, cur, index) => {
+					return prev + cur + ((this.images[index] && this.images[index].render()) || '') ;
+				}, '');
+			</pre>
 		`,
 		[new BlogImage('static/images/blog/3-24-17/imageTest.png')],
 		[Tags.WebDev, Tags.Angular, Tags.TypeScript, Tags.Projects, Tags.PersonalWebsite]
