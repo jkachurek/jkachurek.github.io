@@ -4,7 +4,7 @@ import './blog.scss';
 
 export const BlogComponent: angular.IComponentOptions = {
 	template: require('./blog.html'),
-	controller: function($stateParams: angular.ui.IStateParamsService) {
+	controller: function() {
 		const ctrl = this;
 
 		ctrl.$onInit = () => {
