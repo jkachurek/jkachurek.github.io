@@ -24,12 +24,12 @@ class BlogRepository extends Repository<BlogPost> {
 		return BlogDb.sort(SortByProp('date')).slice(0, n);
 	}
 	getTagData(): any {
-		const tagTotals = BlogDb.reduce((total: Object, curr: BlogPost): Object => {
-			let newTotal = total;
-			curr.tags.forEach(t => newTotal.hasOwnProperty(t) ? newTotal[t]++ : newTotal[t] = 1);
-			return newTotal;
-		}, {});
-		return SortObjectPropertiesByValue(tagTotals);
+		// const tagTotals = BlogDb.reduce((total: Object, curr: BlogPost): Object => {
+		// 	let newTotal = total;
+		// 	curr.tags.forEach(t => newTotal.hasOwnProperty(t) ? newTotal[t]++ : newTotal[t] = 1);
+		// 	return newTotal;
+		// }, {});
+		// return SortObjectPropertiesByValue(tagTotals);
 	}
 }
 const BlogRepositoryInstance = new BlogRepository(BlogDb);
