@@ -1,0 +1,14 @@
+<h2 class="text-center">Recent Posts</h2>
+<ul class="list-group">
+	<li class="list-group-item recent-post"
+			ng-repeat="post in $ctrl.posts">
+		<a ui-sref="blogpost({id: post.id})">
+		{{post.title}}
+		<br/>
+		<span class="date">{{post.date.toLocaleDateString()}}</span>
+		</a>
+	</li>
+	<li class="list-group-item text-center">
+		<a ui-sref="blog"><em>See All</em></a>
+	</li>
+</ul>

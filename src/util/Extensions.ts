@@ -12,3 +12,12 @@ export function SortByProp(prop: string, reverse?: boolean): (a: any, b: any) =>
 		return 0;
 	};
 }
+export function SortObjectPropertiesByValue(obj: Object): Array<any> {
+	let sortable = [];
+	for (var prop in obj) {
+		if (obj.hasOwnProperty(prop)) {
+			sortable.push({key: prop, value: obj[prop]});
+		}
+	}
+	return sortable;
+}

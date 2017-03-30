@@ -1,13 +1,11 @@
-import {Routes} from '../../../routes';
+import './sidebar.scss';
 
-import './nav.scss';
-
-export const NavComponent: angular.IComponentOptions = {
-	template: require('./nav.html'),
-	controller: NavController
+export const Sidebar: angular.IComponentOptions = {
+	template: require('./sidebar.html'),
+	controller: SidebarController
 }
 
-function NavController() {
+function SidebarController() {
 	const ctrl = this;
 
 	ctrl.icons = [
@@ -15,13 +13,6 @@ function NavController() {
 		new NavIcon('https://www.linkedin.com/in/john-kachurek', 'static/images/linkedin-logo.svg'),
 		new NavIcon('http://stackoverflow.com/users/6599088/jkachurek','static/images/stackoverflow.svg'),
 		new NavIcon('mailto:john.kachurek@gmail.com', 'static/images/close-envelope.svg')
-	];
-
-	ctrl.navLinks = [
-		Routes.Blog,
-		Routes.Skills,
-		Routes.Resume,
-		Routes.Projects,
 	];
 }
 

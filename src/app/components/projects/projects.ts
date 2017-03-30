@@ -1,4 +1,4 @@
-import {ProjectData} from './projectData';
+import ProjectRepo from '../../../data/Projects';
 import './projects.scss';
 
 export const ProjectsComponent: angular.IComponentOptions = {
@@ -7,5 +7,5 @@ export const ProjectsComponent: angular.IComponentOptions = {
 };
 
 function ProjectsController() {
-	this.projects = ProjectData;
+	this.projects = ProjectRepo.getAll();
 }

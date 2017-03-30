@@ -1,33 +1,29 @@
-<div class="row">
-	<div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 col-xs-12">
-		<div class="row" ng-repeat="proj in $ctrl.projects">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<strong class="panel-title">{{proj.title}}</strong>
-					&nbsp;&nbsp;//&nbsp;&nbsp;
-					<em>{{proj.date}}</em>
+<div class="row" ng-repeat="proj in $ctrl.projects">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<strong class="panel-title">{{proj.title}}</strong>
+			&nbsp;&nbsp;//&nbsp;&nbsp;
+			<em>{{proj.date}}</em>
+		</div>
+		<div class="panel-body">
+			<div class="{'row': proj.images.length}">
+				<div ng-if="proj.images.length" class="col-sm-4 col-xs-12">
+					<a ng-href="{{proj.images[0]}}" target="_blank">
+						<img class="img-responsive img-rounded black-border" ng-src="{{proj.images[0]}}" alt="Click to view image in a new tab">
+					</a>
 				</div>
-				<div class="panel-body">
-					<div class="{'row': proj.images.length}">
-						<div ng-if="proj.images.length" class="col-sm-4 col-xs-12">
-							<a ng-href="{{proj.images[0]}}" target="_blank">
-								<img class="img-responsive img-rounded black-border" ng-src="{{proj.images[0]}}" alt="Click to view image in a new tab">
-							</a>
-						</div>
-						<div ng-class="{'col-sm-8 col-xs-12': proj.images.length }">
-							<p><em>{{proj.tools}}</em></p>
-							<p>{{proj.description}}</p>
-						</div>
-					</div>
-					<div class="row">
-						<div ng-show="proj.link" class="col-xs-6 col-sm-4 col-md-3">
-							<a ng-href="{{proj.link}}" target="_blank" class="btn btn-primary">View Project</a>
-						</div>
-						<!--<div ng-show="proj.images.length" class="col-xs-6 col-sm-4 col-md-3">
-							<a class="btn btn-primary">View Screenshots</a>
-						</div>-->
-					</div>
+				<div ng-class="{'col-sm-8 col-xs-12': proj.images.length }">
+					<p><em>{{proj.tools}}</em></p>
+					<p>{{proj.description}}</p>
 				</div>
+			</div>
+			<div class="row">
+				<div ng-show="proj.link" class="col-xs-6 col-sm-4 col-md-3">
+					<a ng-href="{{proj.link}}" target="_blank" class="btn btn-primary">View Project</a>
+				</div>
+				<!--<div ng-show="proj.images.length" class="col-xs-6 col-sm-4 col-md-3">
+					<a class="btn btn-primary">View Screenshots</a>
+				</div>-->
 			</div>
 		</div>
 	</div>
