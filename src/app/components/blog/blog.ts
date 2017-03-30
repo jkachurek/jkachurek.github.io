@@ -8,10 +8,11 @@ export const BlogComponent: angular.IComponentOptions = {
 		const ctrl = this;
 
 		ctrl.$onInit = () => {
-			// this.tags = BlogRepo.getTagData();
-			this.blogPosts = $stateParams['tag']
-				? (BlogRepo.getByExpression(b => ~b.tags.indexOf($stateParams['tag'])) || BlogRepo.getAll())
-				: BlogRepo.getAll();
+			this.tags = BlogRepo.getTagData();
+			// this.blogPosts = $stateParams['tag']
+			// 	? (BlogRepo.getByExpression(b => ~b.tags.indexOf($stateParams['tag'])) || BlogRepo.getAll())
+			// 	: BlogRepo.getAll();
+			this.blogPosts = BlogRepo.getAll();
 		};
 	}
 };
