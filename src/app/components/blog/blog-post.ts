@@ -4,7 +4,12 @@ import BlogRepo from '../../../data/Blog';
 export const BlogPost: angular.IComponentOptions = {
 	bindings: { post: '<' },
 	template: require('./blog-post.html'),
-	controller: function($state: angular.ui.IStateService, $stateParams: angular.ui.IStateParamsService) {
+	controller: BlogPostController
+};
+
+BlogPostController.$inject = ['$state', '$stateParams'];
+
+function BlogPostController ($state: angular.ui.IStateService, $stateParams: angular.ui.IStateParamsService) {
 		const ctrl = this;
 		ctrl.$onInit = () => {
 			if ($stateParams['id']) {
@@ -21,7 +26,6 @@ export const BlogPost: angular.IComponentOptions = {
 		};
 		ctrl.scrollToTop = () => { window.scrollTo(0, 0); };
 	}
-};
 // TODO: 
 //   - find way to display shorter version of a blog post when viewing the main blog page,
 //     then prompting visitors to click the full post.
