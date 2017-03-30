@@ -26,6 +26,32 @@
 .footer-text {
   font-size: 0.9em;
   text-align: center; }
+.recent-post .date {
+  font-size: 0.9em; }
+.nav-icon {
+  height: 35px;
+  width: 35px; }
+.recent-post .date {
+  font-size: 0.9em; }
+
+.blog-post .header {
+  cursor: pointer; }
+
+.blog-post p {
+  text-indent: 25px;
+  text-align: justify; }
+
+.blog-post .tag {
+  cursor: pointer;
+  font-style: italic;
+  font-size: .9em; }
+
+.blog-post .default-img {
+  display: block;
+  border: 1px solid black;
+  border-radius: 3px;
+  margin: 5px 0px;
+  margin-left: 25px; }
 .experience-section-header {
   font-family: 'Montserrat', sans-serif;
   text-align: center;
