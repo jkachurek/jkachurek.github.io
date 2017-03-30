@@ -1,0 +1,12 @@
+<div class="row">
+	<img ng-src="static/images/meCrop2.jpg" class="img-circle img-responsive content-center profile-img" width="268" height="268"/>
+</div>
+<div class="spacer-10"></div>
+<div class="row" id="navIcons">
+	<div class="col-xs-3 bottom-spacing" ng-repeat="icon in $ctrl.icons">
+		<a ng-href="{{icon.link}}" target="_blank"><img ng-src="{{icon.img}}" class="nav-icon"></a>
+	</div>
+</div>
+<div class="hidden-xs">
+	<recent-blogs></recent-blogs>
+</div>

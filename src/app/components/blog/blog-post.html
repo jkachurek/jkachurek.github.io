@@ -1,16 +1,20 @@
 <div class="panel panel-default blog-post">
 	<div class="panel-heading">
-		<h2 class="font-montserrat-bold" ng-bind="$ctrl.header"></h2>
+		<h2 class="font-montserrat-bold header" ng-bind="$ctrl.header" ui-sref="blogpost({id: $ctrl.post.id})"></h2>
 		<h3 class="panel-title" style="font-size: 1em" ng-bind="$ctrl.subheader"></h3>		
 	</div>
-	<div class="panel-body">
-		<div ng-include="$ctrl.body"></div>
-		<!--<blog-post-body template="$ctrl.body"></blog-post-body>-->
-	</div>
+	<div class="panel-body" ng-include="$ctrl.body"></div>
 	<div class="panel-footer">
-		<span ng-repeat="tag in $ctrl.tags">
-			<a class="tag" ng-click="$ctrl.goToTag(tag)" ng-bind="tag"></a>
-			<span ng-if="!$last">,&nbsp;</span>
-		</span>
+		<div class="row">
+			<div class="col-xs-10">
+				<div style="display: inline" ng-repeat="tag in $ctrl.tags">
+					<a class="tag" ng-click="$ctrl.goToTag(tag)" ng-bind="tag"></a>
+					<span ng-if="!$last">,&nbsp;</span>
+				</div>
+			</div>
+			<div class="col-xs-2" style="text-align: right;">
+				<a style="cursor: pointer" ng-click="$ctrl.scrollToTop()">Top</a>
+			</div>
+		</div>
 	</div>
 </div>

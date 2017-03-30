@@ -1,19 +1,15 @@
-<div class="row">
-	<div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 col-xs-12">
-		<div class="row experience-section-header">
-			<div class="col-xs-4 " ng-repeat="section in $ctrl.sections"
-										ng-class="{'active-section': $ctrl.activeSection == section}">
-				<img ng-src="{{section.img}}" class="img-responsive content-center pointer"
-						ng-class="{'active-section': $ctrl.activeSection == section}"
-						ng-click="$ctrl.activeSection = section" height="75" width="75">
-				<div class="pointer" ng-click="$ctrl.activeSection = section">
-					<div class="pointer large hidden-xs">{{section.name}}</div>
-					<div class="pointer small visible-xs-block">{{section.name}}</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<resume-item ng-repeat="item in $ctrl.activeSection.contents" item="item"></resume-item>
+<div class="row experience-section-header">
+	<div class="col-xs-4 " ng-repeat="section in $ctrl.sections"
+								ng-class="{'active-section': $ctrl.activeSection == section}">
+		<img ng-src="{{section.img}}" class="img-responsive content-center pointer"
+				ng-class="{'active-section': $ctrl.activeSection == section}"
+				ng-click="$ctrl.activeSection = section" height="75" width="75">
+		<div class="pointer" ng-click="$ctrl.activeSection = section">
+			<div class="pointer large hidden-xs">{{section.name}}</div>
+			<div class="pointer small visible-xs-block">{{section.name}}</div>
 		</div>
 	</div>
+</div>
+<div class="row">
+	<resume-item ng-repeat="item in $ctrl.activeSection.contents" item="item"></resume-item>
 </div>

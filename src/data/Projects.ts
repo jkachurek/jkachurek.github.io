@@ -1,13 +1,8 @@
-import ProjectModel from './projectModel';
+import Project from '../models/Project';
+import Repository from './Repository';
 
-export const ProjectData: ProjectModel[] = [
-	// new ProjectModel('Cult Simulator',
-	// 	'Winter 2016-2017',
-	// 	'A browser-based incremental game created from scratch with TypeScript.',
-	// 	'',
-	// 	[]
-	// ),
-	new ProjectModel('This Website',
+const ProjectDb: Array<Project> = [
+	new Project('This Website',
 		'Redesigned in Winter 2017',
 		`You're looking at it.  This website is built using several things, most notably Angular 1.6.x, TypeScript, SASS, Webpack,
 			& Gulp.  The site is component-based, as you can see in the source code linked below.`,
@@ -15,7 +10,7 @@ export const ProjectData: ProjectModel[] = [
 		'https://github.com/jkachurek/jkachurek.github.io',
 		[]
 	),
-	new ProjectModel('Synth Wave Rider',
+	new Project('Synth Wave Rider',
 		'January 2017',
 		`A simple, rhythm-based game created using Unity Engine for the 2017 Global Game Jam.  I was one of two programmers, along with a 
 			designer and a musician.  My first actual project using Unity, it taught me a lot in the two-day time limit
@@ -24,7 +19,7 @@ export const ProjectData: ProjectModel[] = [
 		'http://globalgamejam.org/2017/games/synth-wave-rider',
 		[]
 	),
-	new ProjectModel('xFid Encryption Application',
+	new Project('xFid Encryption Application',
 		'Summer 2016',
 		`One of my first side projects ever from when I was just learning C#.
 			From time to time, I have been working on porting this project to a website
@@ -47,3 +42,6 @@ export const ProjectData: ProjectModel[] = [
 		].map(s => `static/images/projects/xfid/${s}`)
 	)
 ];
+ProjectDb.forEach((p, index) => p.id = (ProjectDb.length - index));
+const ProjectRepository = new Repository(ProjectDb);
+export default ProjectRepository;

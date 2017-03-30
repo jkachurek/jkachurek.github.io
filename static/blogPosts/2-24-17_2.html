@@ -28,9 +28,61 @@
 	The first, shorter method I tried was the following:
 </p>
 <pre>
-	this.bodyContent = this.bodyContent
-		.split(/#{2}img[0-9]*#{2}/, this.images.length + 1)
-		.reduce((prev, cur, index) => {
-			return prev + cur + ((this.images[index] && this.images[index].render()) || '') ;
-		}, '');
+this.bodyContent = this.bodyContent
+	.split(/#{2}img[0-9]*#{2}/, this.images.length + 1)
+	.reduce((prev, cur, index) => {
+		return prev + cur + ((this.images[index] && this.images[index].render()) || '') ;
+	}, '');
 </pre>
+<p>
+	This method is concise and effective, but it felt a little too unpredictable for my tastes.
+	As you can see, it sifts through the body content and splits it on each <code>##img##</code>
+	tag.  It then uses the Array <code>reduce()</code> method to re-joing the split up body
+	content, adding in an image element in between each segment that was split.  While it is
+	effective, I was not a fan of the part that rendered the image itself.  I will explain the
+	<code>render()</code> method in a bit, but
+	<code>((this.images[index] && this.images[index].render()) || '')</code>
+	seemed like it would inevitably run into an error somewhere down the line.
+</p>
+<p>The second method I tried was this:</p>
+<pre>
+let matches = bodyContent.match(/#{2}img[0-9]*#{2}/g);
+if (!matches) return;
+matches.forEach(match => {
+	let img: string = match.substr(5);
+	let imgIndex: number = (~~img.slice(0, img.length - 2) - 1);
+	if (!this.images[imgIndex]) return;
+	this.bodyContent = this.bodyContent
+		.replace(match, this.images[imgIndex].render());
+});
+</pre>
+<p>
+	While this is almost double the amount of lines, it is a little more clear about what it is
+	doing, and it doesn't rely on a questionable string of logic operators.  In this method, I
+	am using the same regular expression from the first method to instead find an array of matches
+	within the body content.  For each match, I parse out the number from that image tag, then
+	replace the match with its proper image element.
+</p>
+<p>
+	My final note here will explain how I went about rendering the image element, which is quite
+	simple.  Using a <code>render()</code> method was definitely inspired by the dabbling I have done
+	with React, which would likely be the ideal solution for this scenario as far as frameworks go,
+	but I was also excited to take on this challenge with Angular.  First, I created a separate class
+	from <code>BlogPost</code> called <code>BlogImage</code>.  This class would take the source URL of
+	the image, then an object of any desired HTML attributes, and use those to assemble an image
+	element.  The code for this method was quite simple:
+</p>
+<pre>
+let elementPieces = ['&#60;img', `src="${this.src}"`];
+for (var prop in this.attrs) {
+	if (this.attrs.hasOwnProperty(prop)) {
+		elementPieces.push(`${prop}="${this.attrs[prop]}"`);
+	}
+}
+elementPieces.push('&#62;');
+return elementPieces.join(' ');
+</pre>
+<p>
+	Here, we simple create an array of pieces that form the image element by adding the element name, 
+	source, and any of the defined attributes to an array, then joining them with spaces.
+</p>

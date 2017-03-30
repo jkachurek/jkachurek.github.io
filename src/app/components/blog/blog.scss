@@ -1,6 +1,14 @@
+.recent-post {
+	.date {
+		font-size: 0.9em;
+	}
+}
 
 .blog-post {
 	$indent-amt: 25px;
+	.header {
+		cursor: pointer;
+	}
 	p {
 		text-indent: $indent-amt;
 		text-align: justify;

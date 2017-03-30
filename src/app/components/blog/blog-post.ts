@@ -1,11 +1,15 @@
 import {BlogPost as Blog} from '../../../models/Blog';
+import BlogRepo from '../../../data/Blog';
 
 export const BlogPost: angular.IComponentOptions = {
 	bindings: { post: '<' },
 	template: require('./blog-post.html'),
-	controller: function($state: angular.ui.IStateService, $sce: angular.ISCEService) {
+	controller: function($state: angular.ui.IStateService, $stateParams: angular.ui.IStateParamsService) {
 		const ctrl = this;
 		ctrl.$onInit = () => {
+			if ($stateParams['id']) {
+				ctrl.post = BlogRepo.getById(~~$stateParams['id']);
+			}
 			let post = ctrl.post as Blog;
 			ctrl.header = post.title;
 			ctrl.subheader = post.date.toLocaleDateString();
@@ -14,9 +18,11 @@ export const BlogPost: angular.IComponentOptions = {
 		};
 		ctrl.goToTag = (tag: string) => {
 			$state.go('blog', { tag: tag });
-			// filter blog posts to show only posts with this tag
 		};
+		ctrl.scrollToTop = () => { window.scrollTo(0, 0); };
 	}
 };
-// TODO: find way to display shorter version of a blog post when viewing the main blog page,
-//       then prompting visitors to click the full post.  Also pagination.
+// TODO: 
+//   - find way to display shorter version of a blog post when viewing the main blog page,
+//     then prompting visitors to click the full post.
+//   - Pagination of posts.

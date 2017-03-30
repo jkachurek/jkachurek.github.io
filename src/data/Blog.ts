@@ -1,6 +1,7 @@
 import {BlogPost} from '../models/Blog';
 import {Tags} from './Tags';
 import Repository from './Repository';
+import {SortByProp, SortObjectPropertiesByValue} from '../util/Extensions';
 
 // All data for blog posts, newest at the top
 const BlogDb: Array<BlogPost> = [
@@ -13,14 +14,23 @@ const BlogDb: Array<BlogPost> = [
 		'static/blogPosts/2-24-17_1.html',
 		// [],
 		[Tags.WebDev, Tags.Angular, Tags.TypeScript, Tags.Projects, Tags.PersonalWebsite]
-	),
-
-	new BlogPost('test post', new Date(2017, 2, 21), 'static/blogPosts/2-21-17_test.html'),
-	new BlogPost('test post', new Date(2017, 2, 19), 'static/blogPosts/2-19-17_test.html')
+	)
 ];
 // give all posts IDs
 BlogDb.forEach((blog, index) => blog.id = (BlogDb.length - index));
 
-class BlogRepository extends Repository<BlogPost> { }
+class BlogRepository extends Repository<BlogPost> {
+	getRecentPosts(n: number): Array<BlogPost> {
+		return BlogDb.sort(SortByProp('date')).slice(0, n);
+	}
+	getTagData(): any {
+		const tagTotals = BlogDb.reduce((total: Object, curr: BlogPost): Object => {
+			let newTotal = total;
+			curr.tags.forEach(t => newTotal.hasOwnProperty(t) ? newTotal[t]++ : newTotal[t] = 1);
+			return newTotal;
+		}, {});
+		return SortObjectPropertiesByValue(tagTotals);
+	}
+}
 const BlogRepositoryInstance = new BlogRepository(BlogDb);
 export default BlogRepositoryInstance;
