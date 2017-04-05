@@ -55,7 +55,8 @@ const SkillDb: Array<Skill> = [
 		`I am comfortable with basic CSS for web pages, and have used it throughout
 			my personal projects.  I typically use Bootstrap on sites (like this one) to speed
 			up the development process.  I am in the process of learning how to use Flexbox
-			effectively, and will try to use that once I am comfortable with it.`
+			effectively, and will try to use that once I am comfortable with it.  I am also
+			comfortable using SASS.`
 	),
 	new Skill('Visual Studio', 7, SkillCategories.TOOL,
 		`I use Visual Studio daily at work because of its ability to manage and build multiple large
@@ -77,6 +78,15 @@ const SkillDb: Array<Skill> = [
 		`I use SSMS at work to query our databases when developing and testing web
 			applications.  I have not used many of its more robust features, but am
 			comfortable performing basic operations with it.`
+	),
+	new Skill('Unity 5.x', 5, SkillCategories.TOOL,
+		`I have done several tutorials and smaller projects with Unity.  I also used it for my Global
+			Game Jam 2017 submission, which can be seen on my Projects page.  Though I have not produced
+			a large project with it, I have a solid understanding of the scripting API thanks
+			to my knowledge of C#.  I still have much to learn about the Unity Editor itself,
+			especially since the more artistic uses of it (animation, spritesheets, materials, etc.)
+			aren't exactly my specialty.  But overall, I understand it well enough to learn new things
+			with it quickly.`
 	)
 ];
 SkillDb.forEach((s, index) => s.id = SkillDb.length - index);

@@ -1,0 +1,46 @@
+<p>
+	The idea of rendering raw HTML frustrated me enough that I decided to ditch it and move to separate HTML
+	templates. Unfortunately, this also meant getting rid of the embedded image solution that I had developed.
+	If you missed my previous post, check it out to see my explanation of that method. In the future, if I
+	have many posts with several images, I might migrate each blog post to have its own directory to make it
+	easier to keep track of the images.
+</p>
+<p>
+	The first thing I decided to do to make this transition was to change the way I access data that is
+	displayed across my website. The <code>/app</code> folder and its subdirectories were starting to
+	get crowded anyway with files holding the data, so I started migrating it all to a <code>/data</code>
+	folder. Even though this is just a small personal website, I thought it could be a fun experiment
+	to try simulating a sort of "layered architecture" on the front end. Obviously it lacks the actual
+	security of layered architecture, but it was still an interesting project to do with TypeScript.
+</p>
+<p>
+	So, I set about creating a slight twist on the generic repository pattern. Unlike many generic
+	repository implementations, I am not using units of work.  For each page of my site that contains
+	a list of items (so every major page, at this point), I create a "database" of the items using
+	object initializers, assign all of the objects IDs, then create a new instance of a generic
+	repository using that database.
+</p>
+<p>
+	While I will never practically need to sort all of my resume experience by different properties,
+	or retrieve one specific project in my portfolio by an ID number, it was fun to see that I could
+	pull this off with relative ease in TypeScript.  A long while ago while working on my Cult
+	Simulator incremental game, which is also made in TS, I encountered an error due to circular
+	dependencies on the data.  So having a secure, controlled method of accessing data like this
+	can indeed prove useful, even in a static page.
+</p>
+<p>
+	Some might even question my choice of using object initializers to create models that will be
+	displayed as static text, but I find it easier than worrying about misspelling something in a
+	JSON file and having things load incorrectly.  This way, I can enforce consistency across
+	an application and, thanks to TypeScript and the great IntelliSense in Visual Studio Code,
+	I can have a much better idea of what I am doing when I write the code for angular controllers
+	to manipulate those pieces of data.
+</p>
+<p>
+	Changing the blog inspired me to try the repository pattern because I figured if I wanted to
+	have a static blog, I would want easy ways to view single posts, filter by tags, etc. This
+	implementation makes all of that possible.  My current goal is to implement my own solution
+	for showing previews of blog posts, then showing the full thing when you click on it.  I
+	will also discuss more about changes made in recent days in my next post,
+	particularly more about my layout changes.
+</p>
