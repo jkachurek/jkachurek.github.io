@@ -2,7 +2,7 @@
 	<div class="col-xs-12">
 		<ul class="nav nav-pills">
 			<li ng-repeat="link in $ctrl.navLinks" role="presentation" class="bg-info" ui-sref-active="active">
-				<a ui-sref="{{link.toLowerCase()}}" ui-sref-active="active-color">{{link}}</a>
+				<a ui-sref="{{link.toLowerCase()}}" ui-sref-opts="{reload: true}" ui-sref-active="active-color">{{link}}</a>
 			</li>
 		</ul>
 	</div>

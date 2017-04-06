@@ -19,11 +19,15 @@ function routesConfig($stateProvider: angular.ui.IStateProvider, $urlRouterProvi
       component: 'resume'
     })
     .state(Routes.Blog.toLowerCase(), {
-      url: '/blog?tag',
+      url: '/blog',
+      component: 'blog'
+    })
+    .state('filterBlogByTag', {
+      url: '/blog/:tag',
       component: 'blog'
     })
     .state(Routes.BlogPost.toLowerCase(), {
-      url: '/blog/:id',
+      url: '/blogPost/:id',
       component: 'blogPost'
     })
     .state(Routes.Projects.toLowerCase(), {

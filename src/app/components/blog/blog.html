@@ -3,10 +3,10 @@
 		<div class="well well-sm">
 			Tags:
 			<span ng-repeat="tag in $ctrl.tags">
-				<a ui-sref="blog({tag: tag.key})" ng-bind="tag.key"></a>
+				<a ui-sref="filterBlogByTag({tag: tag.key})" ng-bind="tag.key"></a>
 				<span ng-if="!$last">,&nbsp;</span>
 			</span>
 		</div>
 	</div>
 </div>
-<blog-post ng-repeat="post in $ctrl.blogPosts" post="post"></blog-post>
+<blog-post-preview ng-repeat="post in $ctrl.blogPosts" post="post"></blog-post>

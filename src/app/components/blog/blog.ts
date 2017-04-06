@@ -17,6 +17,6 @@ function BlogController($stateParams: angular.ui.IStateParamsService) {
 		this.blogPosts = $stateParams['tag']
 			? (BlogRepo.getByExpression(b => ~b.tags.indexOf($stateParams['tag'])) || BlogRepo.getAll())
 			: BlogRepo.getAll();
-		this.blogPosts = BlogRepo.getAll();
+		// this.blogPosts = BlogRepo.getAll();
 	};
 }

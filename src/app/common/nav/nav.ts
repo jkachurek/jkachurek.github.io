@@ -5,7 +5,7 @@ import './nav.scss';
 export const NavComponent: angular.IComponentOptions = {
 	template: require('./nav.html'),
 	controller: NavController
-}
+};
 
 function NavController() {
 	const ctrl = this;
