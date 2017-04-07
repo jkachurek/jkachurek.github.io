@@ -11,6 +11,8 @@ export const App: angular.IComponentOptions = {
   controller: AppController
 };
 
+AppController.$inject = ['$scope', '$interval'];
+
 function AppController ($scope: IScope, $interval: IIntervalService) {
   const ctrl = this;
 
