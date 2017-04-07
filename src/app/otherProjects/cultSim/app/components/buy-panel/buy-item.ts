@@ -11,6 +11,8 @@ export const BuyItem: angular.IComponentOptions = {
 	controller: BuyItemController
 };
 
+BuyItemController.$inject = ['$scope'];
+
 function BuyItemController($scope: angular.IScope) {
 	const ctrl = this;
 	ctrl.$onInit = () => {
