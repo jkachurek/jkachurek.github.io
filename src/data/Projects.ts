@@ -16,8 +16,8 @@ const ProjectDb: Array<Project> = [
 		`A clicker/incremental game where the theme is building up a cult and expanding your empire. This was my first time using
 			TypeScript to make something with a large amount of logic. It taught me a great deal about all the OOP-style features
 			that TS includes, which made it much easier to code a game. The game needs more content and balancing, but the core
-			mechanics of it are solid. If you want to give it a shot, click the link below!  I plan to get the source code up on
-			GitHub here in the near future.`,
+			mechanics of it are solid. If you want to give it a shot, click the link below!  The source code for this playable version
+			is in a folder of this website's repository if you want to give it a look.`,
 		['Angular 1.6', 'TypeScript'],
 		'/cultSim'
 	),
