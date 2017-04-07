@@ -84,6 +84,145 @@
 
 .skill-header {
   cursor: pointer; }
+/* COLORS */
+.cult-sim {
+  /*BOOTSTRAP OVERRIDES*/
+  /*TEXT*/
+  /*PANELS*/
+  /*BUTTONS*/
+  /*DEFAULT*/
+  /*PRIMARY*/
+  /*SUCCESS*/
+  /*LIST GROUP ITEMS*/
+  /*SUCCESS*/
+  /*INFO*/
+  /*NORMAL CLASSES*/ }
+  .cult-sim body {
+    background-color: #5b6073;
+    padding: 15px; }
+  .cult-sim .text-muted {
+    color: #bbb; }
+  .cult-sim .panel-info {
+    border-color: #868685; }
+  .cult-sim .panel-info > .panel-heading {
+    background-color: #b7b7b7;
+    border-color: #868685; }
+  .cult-sim .panel .panel-body {
+    background-color: #dcdcdc; }
+  .cult-sim .btn-default {
+    color: #333;
+    background-color: #b7b7b7;
+    border-color: #5b6073; }
+  .cult-sim .btn-default:focus,
+  .cult-sim .btn-default.focus {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #8c8c8c; }
+  .cult-sim .btn-default:hover {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad; }
+  .cult-sim .btn-default:active,
+  .cult-sim .btn-default.active,
+  .cult-sim .open > .dropdown-toggle.btn-default {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad; }
+  .cult-sim .btn-default:active:hover,
+  .cult-sim .btn-default.active:hover,
+  .cult-sim .open > .dropdown-toggle.btn-default:hover,
+  .cult-sim .btn-default:active:focus,
+  .cult-sim .btn-default.active:focus,
+  .cult-sim .open > .dropdown-toggle.btn-default:focus,
+  .cult-sim .btn-default:active.focus,
+  .cult-sim .btn-default.active.focus,
+  .cult-sim .open > .dropdown-toggle.btn-default.focus {
+    color: #333;
+    background-color: #d4d4d4;
+    border-color: #8c8c8c; }
+  .cult-sim .btn-default:active,
+  .cult-sim .btn-default.active,
+  .cult-sim .open > .dropdown-toggle.btn-default {
+    background-image: none; }
+  .cult-sim .btn-default.disabled:hover,
+  .cult-sim .btn-default[disabled]:hover,
+  .cult-sim fieldset[disabled] .btn-default:hover,
+  .cult-sim .btn-default.disabled:focus,
+  .cult-sim .btn-default[disabled]:focus,
+  .cult-sim fieldset[disabled] .btn-default:focus,
+  .cult-sim .btn-default.disabled.focus,
+  .cult-sim .btn-default[disabled].focus,
+  .cult-sim fieldset[disabled] .btn-default.focus {
+    background-color: #fff;
+    border-color: #ccc; }
+  .cult-sim .btn-default .badge {
+    color: #fff;
+    background-color: #333; }
+  .cult-sim .list-group-item {
+    color: #560711;
+    background-color: #d7cda6;
+    border-color: black; }
+  .cult-sim .list-group-item-success {
+    color: #b7b7b7;
+    background-color: #355726; }
+  .cult-sim a.list-group-item-success,
+  .cult-sim button.list-group-item-success {
+    color: #3c763d; }
+  .cult-sim a.list-group-item-success .list-group-item-heading,
+  .cult-sim button.list-group-item-success .list-group-item-heading {
+    color: inherit; }
+  .cult-sim a.list-group-item-success:hover,
+  .cult-sim button.list-group-item-success:hover,
+  .cult-sim a.list-group-item-success:focus,
+  .cult-sim button.list-group-item-success:focus {
+    color: #3c763d;
+    background-color: #d0e9c6; }
+  .cult-sim a.list-group-item-success.active,
+  .cult-sim button.list-group-item-success.active,
+  .cult-sim a.list-group-item-success.active:hover,
+  .cult-sim button.list-group-item-success.active:hover,
+  .cult-sim a.list-group-item-success.active:focus,
+  .cult-sim button.list-group-item-success.active:focus {
+    color: #fff;
+    background-color: #3c763d;
+    border-color: #3c763d; }
+  .cult-sim .list-group-item-info {
+    color: #dcdcdc;
+    background-color: #707070; }
+  .cult-sim a.list-group-item-info,
+  .cult-sim button.list-group-item-info {
+    color: #31708f; }
+  .cult-sim a.list-group-item-info .list-group-item-heading,
+  .cult-sim button.list-group-item-info .list-group-item-heading {
+    color: inherit; }
+  .cult-sim a.list-group-item-info:hover,
+  .cult-sim button.list-group-item-info:hover,
+  .cult-sim a.list-group-item-info:focus,
+  .cult-sim button.list-group-item-info:focus {
+    color: #31708f;
+    background-color: #c4e3f3; }
+  .cult-sim a.list-group-item-info.active,
+  .cult-sim button.list-group-item-info.active,
+  .cult-sim a.list-group-item-info.active:hover,
+  .cult-sim button.list-group-item-info.active:hover,
+  .cult-sim a.list-group-item-info.active:focus,
+  .cult-sim button.list-group-item-info.active:focus {
+    color: #fff;
+    background-color: #31708f;
+    border-color: #31708f; }
+  .cult-sim .purchase-table-row {
+    padding: 2px;
+    border: 1px solid black; }
+  .cult-sim .panel-title {
+    font-weight: bolder; }
+  .cult-sim .buy-item-header {
+    cursor: pointer;
+    padding: 3px 5px;
+    margin-bottom: 0px;
+    color: #b7b7b7; }
+  .cult-sim .list-group-item.buy-item {
+    border: 1px solid #666;
+    padding: 0px 0px; }
 body {
   padding-top: 50px;
   padding-bottom: 20px;
