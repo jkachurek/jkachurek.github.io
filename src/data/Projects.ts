@@ -6,9 +6,20 @@ const ProjectDb: Array<Project> = [
 		'Redesigned in Winter 2017',
 		`You're looking at it.  This website is built using several things, most notably Angular 1.6.x, TypeScript, SASS, Webpack,
 			& Gulp.  The site is component-based, as you can see in the source code linked below.`,
-		['Angular 1', 'TypeScript'],
+		['Angular 1.6', 'TypeScript'],
 		'https://github.com/jkachurek/jkachurek.github.io',
 		[]
+	),
+	new Project(
+		'Cult Simulator',
+		'February 2017 - Present',
+		`A clicker/incremental game where the theme is building up a cult and expanding your empire. This was my first time using
+			TypeScript to make something with a large amount of logic. It taught me a great deal about all the OOP-style features
+			that TS includes, which made it much easier to code a game. The game needs more content and balancing, but the core
+			mechanics of it are solid. If you want to give it a shot, click the link below!  I plan to get the source code up on
+			GitHub here in the near future.`,
+		['Angular 1.6', 'TypeScript'],
+		'/cultSim'
 	),
 	new Project('Synth Wave Rider',
 		'January 2017',

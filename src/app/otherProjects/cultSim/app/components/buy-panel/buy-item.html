@@ -1,0 +1,39 @@
+<div class="buy-item-header"
+		 ng-click="$ctrl.item.showDetails = !$ctrl.item.showDetails"
+		 ng-style="$ctrl.item.showDetails && {'border-bottom': '1px solid #666'}">
+	<h4 ng-class="{'text-muted': !$ctrl.item.isAffordable || $ctrl.item.isOwned}">
+		<strong>{{$ctrl.vm.name}}</strong>
+		<span style="font-size: 0.75em;" class="text-muted" ng-hide="$ctrl.item.isOwned">
+			{{$ctrl.vm.header}}
+		</span>
+	</h4>
+</div>
+<div class="row" ng-show="$ctrl.item.showDetails" style="padding: 5px">
+	<div class="col-md-2 col-sm-2 col-xs-2">
+		<button class="btn btn-default" ng-click="$ctrl.buy()"
+				ng-class="{'btn-success': $ctrl.item.isAffordable}"
+				ng-hide="$ctrl.item.isOwned"
+				ng-disabled="!$ctrl.item.isAffordable || ($ctrl.item.duration && !$ctrl.item.canPurchase) || $ctrl.item.isOwned === true">
+			{{$ctrl.timer || 'Buy'}}
+		</button>
+	</div>
+	<div class="col-md-4 col-sm-4 col-xs-10">
+		{{$ctrl.vm.description}}
+	</div>
+	<div class="col-md-3 col-sm-3 col-xs-6">
+		<p class="text-center" style="font-size: 1.2em"><strong>Costs:</strong></p>
+		<ul class="list-group">
+			<li class="list-group-item"	ng-repeat="cost in $ctrl.vm.costs">
+				{{cost}}
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-3 col-sm-3 col-xs-6">
+		<p class="text-center" style="font-size: 1.2em"><strong>Benefits:</strong></p>
+		<ul class="list-group">
+			<li class="list-group-item" ng-repeat="ben in $ctrl.vm.benefits">
+				{{ben}}
+			</li>
+		</ul>
+	</div>
+</div>

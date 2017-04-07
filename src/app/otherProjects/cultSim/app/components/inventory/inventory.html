@@ -1,0 +1,21 @@
+<div class="panel panel-info">
+	<div class="panel-heading" style="cursor: pointer;"
+			 ng-click="$ctrl.showPanel = !$ctrl.showPanel">
+		<h4 class="panel-title">Inventory</h4>
+	</div>
+	<div class="panel-body" ng-show="$ctrl.showPanel">
+		<table class="table table-striped table-bordered">
+			<tr>
+				<th>Name</th>
+				<th>Amount</th>
+				<th>Recruit Chance</th>
+			</tr>
+			<tr ng-repeat="(key,value) in $ctrl.inventory"
+					ng-show="value">
+				<td>{{key}}</td>
+				<td>{{value}}</td>
+				<td>{{($ctrl.recruiters[key] > 100 && '100') || $ctrl.recruiters[key].toFixed(2) || '0'}}%</td>
+			</tr>
+		</table>
+	</div>
+</div>

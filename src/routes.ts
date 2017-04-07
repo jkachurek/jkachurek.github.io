@@ -37,5 +37,9 @@ function routesConfig($stateProvider: angular.ui.IStateProvider, $urlRouterProvi
     .state(Routes.Skills.toLowerCase(), {
       url: '/skills',
       component: 'skills'
+    })
+    .state('cultSim', {
+      url: '/cultSim',
+      component: 'cultSim'
     });
 }

@@ -1,0 +1,18 @@
+<div class="panel panel-info">
+	<div class="panel-heading"
+			 style="cursor: pointer;"
+			 ng-click="$ctrl.showPanel = !$ctrl.showPanel">
+		<h3 class="panel-title">Buy Items</h3>	
+	</div>
+	<div class="panel-body" ng-show="$ctrl.showPanel">
+		<div class="btn-group" role="group" aria-label="...">
+			<button type="button" class="btn btn-default"
+							ng-repeat="(name,show) in $ctrl.sections"
+							ng-class="{'btn-info': show}"
+							ng-click="$ctrl.showSection(name)">{{name}}</button>
+		</div>
+		<buy-table ng-repeat="(name,show) in $ctrl.sections"
+							items="$ctrl[name.toLowerCase()]"
+							ng-show="show"></buy-table>
+	</div>
+</div>

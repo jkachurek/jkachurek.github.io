@@ -1,0 +1,20 @@
+<div class="dropdown" style="margin-top: 10px; margin-bottom: 10px;">
+	<button class="btn btn-default dropdown-toggle" type="button" id="sortDropdown"
+					data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+		Sort...
+	</button>
+	<ul class="dropdown-menu" aria-labelledby="sortDropdown" style="cursor: pointer;">
+		<li><a ng-click="$ctrl.sortTable('name')">Name</a></li>
+		<li><a ng-click="$ctrl.sortTable('category')">Category</a></li>
+		<li><a ng-click="$ctrl.sortTable('price')">Value</a></li>
+	</ul>
+</div>
+
+<ul class="list-group">
+	<li class="list-group-item buy-item" ng-repeat="item in $ctrl.items" ng-hide="!item.cost.length || item.isUnlocked === false"
+			ng-class="{'list-group-item-success': item.isAffordable && !item.isOwned, 'list-group-item-info': !item.isAffordable && !item.isOwned}">
+		<buy-item item="item"></buy-item>
+		<!--<buy-item-header item="item"></buy-item-header>
+		<buy-item-details item="item"></buy-item-details>-->
+	</li>
+</ul>

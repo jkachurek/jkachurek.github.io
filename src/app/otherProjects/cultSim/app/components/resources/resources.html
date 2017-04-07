@@ -1,0 +1,31 @@
+<div class="panel panel-info">
+	<div class="panel-heading" style="cursor: pointer;"
+			 ng-click="$ctrl.showPanel = !$ctrl.showPanel">
+		<h4 class="panel-title">
+			Resources
+			<span ng-show="!$ctrl.showPanel" style="font-size: 0.8em">
+				<span ng-repeat="(key,value) in $ctrl.resourceTypes">
+					|&nbsp;{{value.charAt(0).toUpperCase() + value.slice(1)}}: {{$ctrl.stats.resources[value] | number: 0}}&nbsp;
+				</span>
+			</span>
+		</h4>
+	</div>
+	<div class="panel-body" ng-show="$ctrl.showPanel">
+		<table class="table table-bordered">
+			<tr>
+				<th>Name</th>
+				<th>Amount</th>
+				<th>Rate</th>
+				<th>Multiplier</th>
+				<th>Actual Rate</th>
+			</tr>
+			<tr ng-repeat="(key,value) in $ctrl.resourceTypes">
+				<td>{{value.charAt(0).toUpperCase() + value.slice(1)}}</td>
+				<td>{{$ctrl.stats.resources[value] | number: 2}}</td>
+				<td>{{$ctrl.stats.generators[value] | number: 2}}</td>
+				<td>{{$ctrl.stats.multipliers[value] | number: 2}}</td>
+				<td>{{$ctrl.stats.multipliers[value] * $ctrl.stats.generators[value] | number: 2}}</td>
+			</tr>
+		</table>
+	</div>
+</div>
