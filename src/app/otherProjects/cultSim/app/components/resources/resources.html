@@ -1,6 +1,5 @@
 <div class="panel panel-info">
-	<div class="panel-heading" style="cursor: pointer;"
-			 ng-click="$ctrl.showPanel = !$ctrl.showPanel">
+	<div class="panel-heading" ng-click="$ctrl.showPanel = !$ctrl.showPanel">
 		<h4 class="panel-title">
 			Resources
 			<span ng-show="!$ctrl.showPanel" style="font-size: 0.8em">
@@ -10,7 +9,7 @@
 			</span>
 		</h4>
 	</div>
-	<div class="panel-body" ng-show="$ctrl.showPanel">
+	<!--<div class="panel-body" ng-show="$ctrl.showPanel">
 		<table class="table table-bordered">
 			<tr>
 				<th>Name</th>
@@ -27,5 +26,5 @@
 				<td>{{$ctrl.stats.multipliers[value] * $ctrl.stats.generators[value] | number: 2}}</td>
 			</tr>
 		</table>
-	</div>
+	</div>-->
 </div>
