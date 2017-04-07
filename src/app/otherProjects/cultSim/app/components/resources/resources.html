@@ -2,7 +2,7 @@
 	<div class="panel-heading" ng-click="$ctrl.showPanel = !$ctrl.showPanel">
 		<h4 class="panel-title">
 			Resources
-			<span ng-show="!$ctrl.showPanel" style="font-size: 0.8em">
+			<span style="font-size: 0.8em">
 				<span ng-repeat="(key,value) in $ctrl.resourceTypes">
 					|&nbsp;{{value.charAt(0).toUpperCase() + value.slice(1)}}: {{$ctrl.stats.resources[value] | number: 0}}&nbsp;
 				</span>
