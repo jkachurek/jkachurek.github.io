@@ -1,12 +1,14 @@
 <div class="panel panel-default">
 	<div class="panel-heading">
-		<strong>{{$ctrl.item.location}}</strong><span ng-if="$ctrl.item.position">&nbsp;&nbsp;//&nbsp;&nbsp;</span>
-		{{$ctrl.item.position}}<span ng-if="$ctrl.item.dates">&nbsp;&nbsp;//&nbsp;&nbsp;</span>
-		<em>{{$ctrl.item.dates}}</em>
+		<strong ng-bind="$ctrl.item.location"></strong>
+		<span ng-if="$ctrl.item.position">&nbsp;&nbsp;//&nbsp;&nbsp;</span>
+		{{$ctrl.item.position}}
+		<span ng-if="$ctrl.item.dates">&nbsp;&nbsp;//&nbsp;&nbsp;</span>
+		<em ng-bind="$ctrl.item.dates"></em>
 	</div>
 	<div class="panel-body">
 		<ul>
-			<li ng-repeat="bullet in $ctrl.item.bullets">{{bullet}}</li>
+			<li ng-repeat="bullet in $ctrl.item.bullets" ng-bind="bullet"></li>
 		</ul>
 	</div>
 </div>

@@ -1,5 +1,3 @@
-import {SortByProp} from '../../../util/Extensions';
-import {Routes} from '../../../routes';
 import BlogRepo from '../../../data/Blog';
 
 import './recent-blogs.scss';

@@ -1,6 +1,8 @@
 <div class="panel panel-default blog-post">
 	<div class="panel-heading">
-		<a ui-sref="blogpost({id: $ctrl.post.id})"><h2 class="font-montserrat-bold header preview-header" ng-bind="$ctrl.post.title"></h2></a>
+		<a ui-sref="blogpost({id: $ctrl.post.id})">
+			<h2 class="font-montserrat-bold header preview-header" ng-bind="$ctrl.post.title"></h2>
+		</a>
 		<h3 class="panel-title" style="font-size: 1em" ng-bind="$ctrl.post.date.toLocaleDateString()"></h3>
 	</div>
 	<div class="panel-body">

@@ -2,11 +2,10 @@
 <ul class="list-group">
 	<li class="list-group-item recent-post"
 			ng-repeat="post in $ctrl.posts">
-		<a ui-sref="blogpost({id: post.id})">
-		{{post.title}}
-		<br/>
-		<span class="date">{{post.date.toLocaleDateString()}}</span>
+		<a ui-sref="blogpost({id: post.id})" ng-bind="post.title">
 		</a>
+		<br/>
+		<span class="date" ng-bind="post.date.toLocaleDateString()"></span>
 	</li>
 	<li class="list-group-item text-center">
 		<a ui-sref="blog"><em>See All</em></a>

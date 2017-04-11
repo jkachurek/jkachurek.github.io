@@ -1,9 +1,9 @@
 <div class="row" ng-repeat="proj in $ctrl.projects">
 	<div class="panel panel-default">
 		<div class="panel-heading">
-			<strong class="panel-title">{{proj.title}}</strong>
+			<strong class="panel-title" ng-bind="proj.title"></strong>
 			&nbsp;&nbsp;//&nbsp;&nbsp;
-			<em>{{proj.date}}</em>
+			<em ng-bind="proj.date"></em>
 		</div>
 		<div class="panel-body">
 			<div class="{'row': proj.images.length}">
@@ -13,8 +13,8 @@
 					</a>
 				</div>
 				<div ng-class="{'col-sm-8 col-xs-12': proj.images.length }">
-					<p><em>{{proj.tools}}</em></p>
-					<p>{{proj.description}}</p>
+					<p><em ng-bind="proj.tools"></em></p>
+					<p ng-bind="proj.description"></p>
 				</div>
 			</div>
 			<div class="row">

@@ -17,23 +17,17 @@
 			{{$ctrl.timer || 'Buy'}}
 		</button>
 	</div>
-	<div class="col-md-4 col-sm-4 col-xs-10">
-		{{$ctrl.vm.description}}
-	</div>
-	<div class="col-md-3 col-sm-3 col-xs-6">
+	<div class="col-md-4 col-sm-10 col-xs-10" ng-bind="$ctrl.vm.description"></div>
+	<div class="col-md-3 col-sm-6 col-xs-6">
 		<p class="text-center" style="font-size: 1.2em"><strong>Costs:</strong></p>
 		<ul class="list-group">
-			<li class="list-group-item"	ng-repeat="cost in $ctrl.vm.costs">
-				{{cost}}
-			</li>
+			<li class="list-group-item"	ng-repeat="cost in $ctrl.vm.costs" ng-bind="cost"></li>
 		</ul>
 	</div>
-	<div class="col-md-3 col-sm-3 col-xs-6">
+	<div class="col-md-3 col-sm-6 col-xs-6">
 		<p class="text-center" style="font-size: 1.2em"><strong>Benefits:</strong></p>
 		<ul class="list-group">
-			<li class="list-group-item" ng-repeat="ben in $ctrl.vm.benefits">
-				{{ben}}
-			</li>
+			<li class="list-group-item" ng-repeat="ben in $ctrl.vm.benefits" ng-bind="ben"></li>
 		</ul>
 	</div>
 </div>
