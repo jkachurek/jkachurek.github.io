@@ -11,6 +11,6 @@ BlogPostPreviewController.$inject = ['$state'];
 function BlogPostPreviewController($state: angular.ui.IStateService) {
 	const ctrl = this;
 	ctrl.goToTag = (tag: string) => {
-		$state.go('blog', { tag: tag });
+		$state.go('blog', { tag: tag }, { reload: true });
 	};
 }

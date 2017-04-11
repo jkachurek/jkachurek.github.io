@@ -7,7 +7,7 @@ import {SortByProp, SortObjectPropertiesByValue} from '../util/Extensions';
 const BlogDb: Array<BlogPost> = [
 	new BlogPost('Introduction to "Cult Simulator"', new Date(2017, 3, 10, 1, 0),
 		'static/blogPosts/4-10-17.html',
-		[Tags.CultSimulator, Tags.TypeScript, Tags.GameDev, Tags.Angular]
+		[Tags.CultSimulator, Tags.TypeScript, Tags.GameDev, Tags.Angular, Tags.Projects]
 	),
 	new BlogPost('Building the Blog, Part 3: Changing Data Access', new Date(2017, 3, 4, 3, 0),
 		'static/blogPosts/4-4-17.html',

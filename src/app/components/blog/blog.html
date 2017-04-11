@@ -9,4 +9,7 @@
 		</div>
 	</div>
 </div>
+<div class="row text-center" ng-if="$ctrl.currentTag">
+	<h4>All blog posts tagged with <em ng-bind="$ctrl.currentTag"></em></h4>
+</div>
 <blog-post-preview ng-repeat="post in $ctrl.blogPosts" post="post"></blog-post>

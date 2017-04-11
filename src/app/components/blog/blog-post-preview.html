@@ -9,7 +9,7 @@
 		<div class="well well-sm">
 				Tags:&nbsp;
 				<span ng-repeat="tag in $ctrl.post.tags">
-					<a class="tag" ng-click="$ctrl.goToTag(tag)" ng-bind="tag"></a>
+					<a class="tag" ui-sref="filterBlogByTag({tag: tag})" ng-bind="tag"></a>
 					<span ng-if="!$last">,&nbsp;</span>
 				</span>
 		</div>
