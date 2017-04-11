@@ -5,13 +5,11 @@
 }
 .preview-header {
 	color: #333;
+	cursor: pointer;
 }
 
 .blog-post {
 	$indent-amt: 25px;
-	.header {
-		cursor: pointer;
-	}
 	p {
 		text-indent: $indent-amt;
 		text-align: justify;

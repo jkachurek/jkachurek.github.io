@@ -1,9 +1,9 @@
 <div class="row">
 	<div class="col-xs-12">
-		<ul class="nav nav-pills">
-			<li ng-repeat="link in $ctrl.navLinks" role="presentation" class="bg-info" ui-sref-active="active">
-				<a ui-sref="{{link.toLowerCase()}}" ui-sref-opts="{reload: true}" ui-sref-active="active-color">{{link}}</a>
-			</li>
+		<ul class="btn-group">
+			<button type="button" ng-repeat="link in $ctrl.navLinks" class="btn btn-default" ui-sref-active="active-color"
+							ui-sref="{{link.toLowerCase()}}" ui-sref-opts="{reload: true}" ng-bind="link">
+			</button>
 		</ul>
 	</div>
 </div>
