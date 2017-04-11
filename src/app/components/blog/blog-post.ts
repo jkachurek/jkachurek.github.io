@@ -7,9 +7,9 @@ export const BlogPost: angular.IComponentOptions = {
 	controller: BlogPostController
 };
 
-BlogPostController.$inject = ['$state', '$stateParams'];
+BlogPostController.$inject = ['$stateParams'];
 
-function BlogPostController ($state: angular.ui.IStateService, $stateParams: angular.ui.IStateParamsService) {
+function BlogPostController ($stateParams: angular.ui.IStateParamsService) {
 		const ctrl = this;
 		ctrl.$onInit = () => {
 			if ($stateParams['id']) {
@@ -20,9 +20,6 @@ function BlogPostController ($state: angular.ui.IStateService, $stateParams: ang
 			ctrl.subheader = post.date.toLocaleDateString();
 			ctrl.body = post.bodyTemplate;
 			ctrl.tags = post.tags;
-		};
-		ctrl.goToTag = (tag: string) => {
-			$state.go('blog', { tag: tag });
 		};
 		ctrl.scrollToTop = () => { window.scrollTo(0, 0); };
 	}

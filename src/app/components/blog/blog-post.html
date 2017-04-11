@@ -8,7 +8,7 @@
 		<div class="row">
 			<div class="col-xs-10">
 				<div style="display: inline" ng-repeat="tag in $ctrl.tags">
-					<a class="tag" ng-click="$ctrl.goToTag(tag)" ng-bind="tag"></a>
+					<a class="tag" ui-sref="filterBlogByTag({tag: tag})" ng-bind="tag"></a>
 					<span ng-if="!$last">,&nbsp;</span>
 				</div>
 			</div>
