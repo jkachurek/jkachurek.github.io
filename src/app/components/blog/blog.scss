@@ -1,3 +1,5 @@
+$dk-green: #326149;
+
 .recent-post {
 	.date {
 		font-size: 0.9em;
@@ -28,5 +30,10 @@
 	}
 	.well {
 		margin-bottom: 5px;
+	}
+}
+.pagination {
+	li {
+		cursor: pointer;
 	}
 }

@@ -59,6 +59,9 @@
 
 .blog-post .well {
   margin-bottom: 5px; }
+
+.pagination li {
+  cursor: pointer; }
 .experience-section-header {
   font-family: 'Montserrat', sans-serif;
   text-align: center;

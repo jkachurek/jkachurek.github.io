@@ -12,4 +12,22 @@
 <div class="row text-center" ng-if="$ctrl.currentTag">
 	<h4>All blog posts tagged with <em ng-bind="$ctrl.currentTag"></em></h4>
 </div>
-<blog-post-preview ng-repeat="post in $ctrl.blogPosts" post="post"></blog-post>
+<blog-post-preview ng-repeat="post in $ctrl.currentPage" post="post"></blog-post-preview>
+<div class="row" align="center" ng-show="$ctrl.pages.length > 1">
+	<ul class="pagination">
+		<li ng-click="$ctrl.goToPage($ctrl.currentPageNumber - 1)"
+				ng-class="{'disabled': $ctrl.currentPageNumber === 0}">
+			<a aria-label="Previous">&laquo;</a>			
+		</li>
+		<li ng-repeat="page in $ctrl.pages"
+				ng-class="{'active': $index === $ctrl.currentPageNumber}"
+				ng-click="$ctrl.goToPage($index)">
+			<a 
+				 ng-bind="$index + 1"></a>
+		</li>
+		<li ng-click="$ctrl.goToPage($ctrl.currentPageNumber + 1)"
+				ng-class="{'disabled': $ctrl.currentPageNumber === $ctrl.pages.length - 1}">
+			<a aria-label="Next">&raquo;</a>			
+		</li>
+	</ul>
+</div>
