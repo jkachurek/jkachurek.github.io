@@ -1,0 +1,60 @@
+<p>
+  I left off my previous post discussing how I initially plotted out the game logic. Here, I will
+  explain how that worked, and also why I wound up completely changing it later on.
+</p>
+<p>
+  As mentioned before, my initial model for <code>PlayerData</code> was as follows:
+  <pre>
+constructor() { 
+  for (var type in ResourceTypes) { 
+    this.resources[type] = 0; 
+    this.generators[type] = 0; 
+    this.multipliers[type] = 1; 
+  } 
+} 
+resources: Object = {}; 
+multipliers: Object = {}; 
+generators: Object = {}; 
+inventory: Object = {}; 
+  </pre>
+  I definitely didn't intend this to be the final form of the class, but it worked for
+  what I needed early on in the game. The first Update method I wrote for the game was
+  the following:
+  <pre>
+Update(): void { 
+  for(var type in ResourceTypes) { 
+    if (ResourceTypes.hasOwnProperty(type)) { 
+      PlayerData.resources[ResourceTypes[type]] +=
+        (PlayerData.generators[ResourceTypes[type]]
+         * PlayerData.multipliers[ResourceTypes[type]]); 
+    } 
+  } 
+}
+  </pre>
+</p>
+<p>
+  So, every time <code>Update()</code> is called, it is incrementing each of the player's
+  resources (as defined in the module <code>ResourceTypes</code>) by the current amount
+  of the player's generators and multipliers for that resource. This early version of the
+  game had it such that rather than adding specific items to a player's inventory, it simply
+  added its effects to a running count in the Player Data. So, if you had no generators, then
+  you bought two items that generate $1/sec, and one that generates $5/sec,
+  <code>PlayerData.generators['MONEY']</code> would equal 7, but we would have no record
+  of which items provided this effect.
+</p>
+<p>
+  The original intent of this was to reduce how often the game had to check in on every game
+  object instance. This method is technically way more efficient than the current version,
+  but it is far, far less extensible. Which is an issue I will approach later. This also
+  simplified the logic for adding and removing benefits to the player's inventory.
+  It simply incremented the value in PlayerData, then only checked PlayerData each tick.
+</p>
+<p>
+  The major pitfalls of this method are caused by an inability to track which specific
+  items are owned. This makes it almost impossible to create more complex benefits and,
+  more importantly, define how the player unlocks items. I will go into detail on the item
+  unlocking system in a future post, but I wanted the unlocking of other items to be
+  determined by a variety of factors, including current inventory of units/locations/etc.
+  That pretty much sums up the initial game logic, but stay tuned to the blog for more on
+  how I overhauled this game logic in order to create the unlock system.
+</p>
