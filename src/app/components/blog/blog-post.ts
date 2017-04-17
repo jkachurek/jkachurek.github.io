@@ -21,9 +21,7 @@ function BlogPostController ($stateParams: angular.ui.IStateParamsService) {
 			ctrl.body = post.bodyTemplate;
 			ctrl.tags = post.tags;
 		};
-		ctrl.scrollToTop = () => { window.scrollTo(0, 0); };
+		ctrl.scrollToTop = () => {
+			document.querySelector('blog-post').scrollIntoView({behavior: 'smooth', block: 'start'});
+		};
 	}
-// TODO: 
-//   - find way to display shorter version of a blog post when viewing the main blog page,
-//     then prompting visitors to click the full post.
-//   - Pagination of posts.

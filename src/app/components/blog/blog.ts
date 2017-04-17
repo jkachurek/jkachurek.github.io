@@ -31,6 +31,7 @@ function BlogController($stateParams: angular.ui.IStateParamsService) {
 	};
 	ctrl.goToPage = (pageNumber: number): void => {
 		if (!ctrl.pages[pageNumber]) return;
+		document.querySelector('.ui-view').scrollIntoView({behavior: 'smooth', block: 'start'});
 		ctrl.currentPageNumber = pageNumber;
 		ctrl.currentPage = ctrl.pages[pageNumber];
 	};
