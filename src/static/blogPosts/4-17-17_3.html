@@ -1,0 +1,58 @@
+<p>
+	I won't usually try to be clever in post titles, but this one was too easy. In this post about
+	my development of the Cult Simulator game, I will detail how I moved from my initial system for
+	updating the game and managing game items to the current system. I previously discussed the
+	pitfalls of the initial system and what I attempted to do with my overhaul, so here you will see
+	that process explained. One of the first, biggest changes I made was after the realization that
+	any game item's effects can ostensibly be divided into two categories: Costs and Benefits.
+</p>
+<p>
+	Costs are used when an item is purchased, whereas Benefits can take many forms and positively
+	affect the player in multiple ways. Benefits can be one-time or continuous. They might be
+	calculated every tick (which occurs more than once per second) or on a fixed update every second.
+	They can give you lump sums, generate resources for you, recruit other units, amplify your powers,
+	and more. The diversity of effects for Benefits led me to the conclusion that I had to make two
+	main interfaces for game item effects: <code>ICost</code> (which already existed) and
+	<code>IBenefit</code>.
+</p>
+<p>
+	As before, the <code>ICost</code> interface defines that we have to be able to calculate the
+	affordability of an individual cost as well as spend and modify that cost. This makes it easy to
+	check a game item's affordability; though one item might require multiple types of units
+	and/or resources, each item simply contains an array of <code>ICost</code>. We can therefore
+	calculate	affordability by calling:
+	<pre>item.isAffordable = item.cost.reduce((aff, c) => {return aff && c.isAffordable()}, true)</pre>
+	Likewise, the item's costs can all be applied to the player's inventory/resources by simply
+	calling <code>spend()</code> in a <code>forEach()</code> of the costs.
+</p>
+<p>
+	Where I formerly had completely separate classes for various benefits (which all still inherited from
+	<code>ResourceUsage</code>), I decided that an <code>IBenefit</code> interface would make adding and
+	removing these benefits much less repetitive, and would make it much easier to add new types of
+	benefits in the future. The basic <code>IBenefit</code> interface only requires two methods:
+	<code>add()</code> and <code>remove()</code>. This is to accommodate Benefits which might not trigger
+	every tick, for example a static increase in the player's Influence. For benefits that <em>do</em>
+	trigger every tick, I created the <code>Tickable</code> interface. In the future, I might split these
+	into <code>IStaticBenefit</code> and <code>ITickableBenefit</code>, since some tickable benefits
+	do not need to be added or removed. But for now I have chosen to leave that functionality in case I
+	find myself needing it down the line.
+</p>
+<p>
+	The major advantage to making all benefits derive from the <code>IBenefit</code> interface is that
+	when an item is purchased, we can simply call:
+	<pre>item.benefits.forEach(b => b.add());</pre>
+	...And vice versa for when an item is removed from the inventory.
+	It follows that every tick, we will call:
+	<pre>item.tickables.forEach(t => t.tick());</pre>
+</p>
+<p>
+	One of the other major changes that I made in this transition was tracking the amount of each item
+	that the player owns <em>within the item object itself</em>. In doing so, we can simply multiply
+	each item's tickable effects by a factor that includes any multipliers and the number of that item
+	owned. This made it possible to create much more complex types of Benefits, for example a
+	building that increases the productivity of all Business units by 5%.
+</p>
+<p>
+	As I continue this series on Cult Simulator, I'll talk more about how I set up game data, and
+	item unlocks, so check the website often for more updates.
+</p>
