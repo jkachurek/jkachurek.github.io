@@ -5,11 +5,15 @@ import {SortByProp, SortObjectPropertiesByValue} from '../util/Extensions';
 
 // All data for blog posts, newest at the top
 const BlogDb: Array<BlogPost> = [
-	new BlogPost('Introduction to "Cult Simulator"', new Date(2017, 3, 10, 1, 0),
+	new BlogPost('CultSim, Part 1: First Steps', new Date(2017, 3, 17, 12, 0),
+		'static/blogPosts/4-17-17.html',
+		[Tags.CultSimulator, Tags.TypeScript, Tags.GameDev, Tags.Angular, Tags.Projects]
+	),
+	new BlogPost('Introduction to "Cult Simulator"', new Date(2017, 3, 10, 13, 0),
 		'static/blogPosts/4-10-17.html',
 		[Tags.CultSimulator, Tags.TypeScript, Tags.GameDev, Tags.Angular, Tags.Projects]
 	),
-	new BlogPost('Building the Blog, Part 3: Changing Data Access', new Date(2017, 3, 4, 3, 0),
+	new BlogPost('Building the Blog, Part 3: Changing Data Access', new Date(2017, 3, 4, 15, 0),
 		'static/blogPosts/4-4-17.html',
 		[Tags.WebDev, Tags.Angular, Tags.TypeScript, Tags.Projects, Tags.PersonalWebsite]
 	),

@@ -1,3 +1,5 @@
+@import '../../../vars.scss';
+
 .header-display {
 	font-family: 'Bungee Shade', cursive;
   .large-txt {
@@ -9,7 +11,7 @@
 }
 
 .header-well {
-  background-color: #326149;
+  background-color: $dk-green;
   color: lightgrey;
   border: 1px solid #222;
 }
