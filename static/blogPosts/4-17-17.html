@@ -1,0 +1,43 @@
+<p>
+	When I first approached Cult Simulator, I was thinking of making the engine for it quick &amp;
+	dirty using JavaScript. I planned to create a couple object prototypes and then store all of
+	the game data in JSON. But rather than wrangling what would become very long, unwieldy JSON files,
+	I decided to start writing the game in TypeScript. My past experience with TypeScript was
+	limited almost completely to my bits of work using Angular 2, so I had never used it for
+	anything other than controller logic. Before worrying about all the data in the game, I took my
+	first steps by working on the core infrastructure that would make the thing tick (literally).
+	The first few pieces I made for the project were files that defined settings, player
+	data/stats, resources, game items, and the game instance.
+</p>
+<p>
+	I wrote <code>GameSettings</code> as a simple constant object that would contain various values
+	affecting the way the game runs. The first value I added, for example, was the factor by which
+	the cost of an item would increase after being purchased. It has grown to include how often
+	the game updates and the amount gained by clicking a resource button.
+</p>
+<p>
+	Initially, the <code>PlayerData</code> class only contained objects that would hold values
+	related to player inventory. I will explain more on my initial game update method in a future
+	post, but it revolved around the values in the player's data.
+</p>
+<p>
+	The more interesting initial code that I wrote for the game involved resources. First, I defined
+	a base class, <code>ResourceUsage</code>, which is basically just a key value pair of a
+	resource name and an amount. I then defined a few other classes that extended it:
+	<code>Cost</code>, <code>UnitCost</code>, <code>Generator</code>, and <code>Multiplier</code>.
+	<code>Cost</code> and <code>UnitCost</code> implement an interface, <code>ICost</code>,
+	so we can buy things in a very uniform way.
+</p>
+<p>
+	The <code>ICost</code> interface states that any Cost must be able to be checked for its
+	affordability, spent, and then increased by a factor (by default, the factor defined in the
+	game settings). This is important because a default Cost will subtract from a player's
+	resources, whereas a Unit Cost will deplete the player's inventory. Similarly, Generators and
+	Multipliers were defined separately because they added to different properties of the player's
+	data. A while later, through significant refactoring, I wound up streamlining this process to
+	make it more extensible, but this was a solid start for the project.
+</p>
+<p>
+	Be sure to keep an eye out for my next post, where I will explain the logic behind my first
+	attempt at the game's update methods!
+</p>
