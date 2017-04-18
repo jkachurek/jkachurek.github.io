@@ -1,13 +1,13 @@
 <div class="panel panel-default blog-post">
 	<div class="panel-heading">
-		<h2 class="font-montserrat-bold header" ng-bind="$ctrl.header" ui-sref="blogpost({id: $ctrl.post.id})"></h2>
-		<h3 class="panel-title" style="font-size: 1em" ng-bind="$ctrl.subheader"></h3>		
+		<h2 class="font-montserrat-bold header" ng-bind="$ctrl.post.title" ui-sref="blogpost({id: $ctrl.post.id})"></h2>
+		<h3 class="panel-title blog-date" ng-bind="$ctrl.post.getDisplayDateTime()"></h3>		
 	</div>
-	<div class="panel-body" ng-include="$ctrl.body"></div>
+	<div class="panel-body" ng-include="$ctrl.post.bodyTemplate"></div>
 	<div class="panel-footer">
 		<div class="row">
 			<div class="col-xs-10">
-				<div style="display: inline" ng-repeat="tag in $ctrl.tags">
+				<div style="display: inline" ng-repeat="tag in $ctrl.post.tags">
 					<a class="tag" ui-sref="filterBlogByTag({tag: tag})" ng-bind="tag"></a>
 					<span ng-if="!$last">,&nbsp;</span>
 				</div>

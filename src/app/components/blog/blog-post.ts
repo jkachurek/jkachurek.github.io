@@ -7,19 +7,17 @@ export const BlogPost: angular.IComponentOptions = {
 	controller: BlogPostController
 };
 
-BlogPostController.$inject = ['$stateParams'];
+BlogPostController.$inject = ['$stateParams', '$state'];
 
-function BlogPostController ($stateParams: angular.ui.IStateParamsService) {
+function BlogPostController ($stateParams: angular.ui.IStateParamsService, $state: angular.ui.IStateService) {
 		const ctrl = this;
 		ctrl.$onInit = () => {
 			if ($stateParams['id']) {
 				ctrl.post = BlogRepo.getById(~~$stateParams['id']);
 			}
-			let post = ctrl.post as Blog;
-			ctrl.header = post.title;
-			ctrl.subheader = post.date.toLocaleDateString();
-			ctrl.body = post.bodyTemplate;
-			ctrl.tags = post.tags;
+			if (!ctrl.post) {
+				$state.go('blog');
+			}
 		};
 		ctrl.scrollToTop = () => {
 			document.querySelector('blog-post').scrollIntoView({behavior: 'smooth', block: 'start'});

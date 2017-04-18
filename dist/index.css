@@ -44,6 +44,9 @@
   color: #333;
   cursor: pointer; }
 
+.blog-date {
+  font-size: 1em; }
+
 .blog-post p {
   text-indent: 25px;
   text-align: justify; }

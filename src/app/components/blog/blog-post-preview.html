@@ -3,7 +3,8 @@
 		<a ui-sref="blogpost({id: $ctrl.post.id})">
 			<h2 class="font-montserrat-bold header preview-header" ng-bind="$ctrl.post.title"></h2>
 		</a>
-		<h3 class="panel-title" style="font-size: 1em" ng-bind="$ctrl.post.date.toLocaleDateString()"></h3>
+		<h3 class="panel-title blog-date"
+				ng-bind="$ctrl.post.getDisplayDateTime()"></h3>
 	</div>
 	<div class="panel-body">
 		<div class="well well-sm">
