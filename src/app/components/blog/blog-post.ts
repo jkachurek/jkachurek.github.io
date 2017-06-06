@@ -10,16 +10,16 @@ export const BlogPost: angular.IComponentOptions = {
 BlogPostController.$inject = ['$stateParams', '$state'];
 
 function BlogPostController ($stateParams: angular.ui.IStateParamsService, $state: angular.ui.IStateService) {
-		const ctrl = this;
-		ctrl.$onInit = () => {
-			if ($stateParams['id']) {
-				ctrl.post = BlogRepo.getById(~~$stateParams['id']);
-			}
-			if (!ctrl.post) {
-				$state.go('blog');
-			}
-		};
-		ctrl.scrollToTop = () => {
-			document.querySelector('blog-post').scrollIntoView({behavior: 'smooth', block: 'start'});
-		};
-	}
+	const ctrl = this;
+	ctrl.$onInit = () => {
+		if ($stateParams['id']) {
+			ctrl.post = BlogRepo.getById(~~$stateParams['id']);
+		}
+		if (!ctrl.post) {
+			$state.go('blog');
+		}
+	};
+	ctrl.scrollToTop = () => {
+		document.querySelector('blog-post').scrollIntoView({behavior: 'smooth', block: 'start'});
+	};
+}

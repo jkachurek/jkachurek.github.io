@@ -16,9 +16,7 @@ export const SkillsComponent: angular.IComponentOptions = {
 			I attended a RailsBridge event, which gave me a basic understanding of Ruby and Rails. I have
 			also done tutorials and small projects using Electron, React/Redux, Python, Ember, Flask,
 			and Vue.  While I do not have many fully-functioning applications using these skills, I have
-			applied much of what I learned with them to my other work.  An example of this would be
-			trying to use Redux's philosophy on immutable data in my Angular projects, even though they
-			don't use Redux itself.
+			applied much of what I learned with them to my other work.
 		`;
 	}
 };

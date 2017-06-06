@@ -14,10 +14,11 @@ const SkillDb: Array<Skill> = [
 			insurance applications, simple websites (like this one), and even browser games like my Cult Simulator
 			project (see the Projects page for details).`
 	),
-	new Skill('Angular 2+', 5, SkillCategories.FRAMEWORK,
-		`I have dabbled in Angular 2+, but have not produced any finished products with it.  I am
-			comfortable with it for creating and routing between views, but have not had the chance
-			to use it to work with complex data or APIs.`
+	new Skill('Angular 2+', 7, SkillCategories.FRAMEWORK,
+		`I have not worked with modern Angular as much as I have with Angular 1.x,
+			but I am still very comfortable with it.  I have used it for a complex
+			web application at work and for multiple side projects.  In addition,
+			as you can read below, I have used it in conjunction with Redux.`
 	),
 	new Skill('.NET', 6, SkillCategories.FRAMEWORK,
 		`I have used the .NET Framework almost exclusively for the purpose of making web applications,
@@ -29,6 +30,16 @@ const SkillDb: Array<Skill> = [
 		both side projects and work-related applications using .NET Core in conjunction with Angular 2.
 		I am mostly comfortable with this due to its similarity to the regular .NET Framework, and how
 		well it works with the Node ecosystem.`
+	),
+	new Skill('Redux', 6, SkillCategories.FRAMEWORK,
+		`I have worked with angular-redux, the implementation of Redux for
+			Angular 2+, on work projects and am comfortable with its core
+			concepts and how to implement them in a complex application.
+			Most recently, I used Redux to create an insurance quoting
+			application that includes a multi-step workflow with generic
+			presentational components for each page.
+			I hope to use Redux with React in more advanced applications
+			in the near future.`
 	),
 	new Skill('C#', 8, SkillCategories.LANGUAGE,
 		`I am very comfortable with C# for web applications and architecture.  I am still learning
@@ -72,7 +83,8 @@ const SkillDb: Array<Skill> = [
 	),
 	new Skill('Node', 7, SkillCategories.TOOL,
 		`I have worked with NodeJS and NPM on almost every side project I have worked on, so I am
-			very comfortable with using it to create a wide variety of applications.`
+			very comfortable with using it to create a wide variety of web applications.  I plan to
+			use it more for server-side code soon.`
 	),
 	new Skill('SQL Server Management Studio', 4, SkillCategories.TOOL,
 		`I use SSMS at work to query our databases when developing and testing web
