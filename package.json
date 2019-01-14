@@ -1,7 +1,8 @@
 {
   "dependencies": {
+    "@uirouter/angularjs": "1.0.0",
     "angular": "^1.6.0",
-    "angular-ui-router": "1.0.0-beta.1"
+    "gulp-cli": "^2.0.1"
   },
   "devDependencies": {
     "@types/angular": "^1.5.16",
@@ -11,7 +12,7 @@
     "gulp-angular-templatecache": "^1.8.0",
     "@types/angular-ui-router": "^1.1.34",
     "del": "^2.0.2",
-    "gulp": "gulpjs/gulp#4ed9a4a3275559c73a396eff7e1fde3824951ebb",
+    "gulp": "^4.0.0",
     "gulp-hub": "frankwallis/gulp-hub#d461b9c700df9010d0a8694e4af1fb96d9f38bf4",
     "gulp-filter": "^4.0.0",
     "gulp-util": "^3.0.7",
@@ -48,7 +49,7 @@
     "html-loader": "^0.4.3",
     "ts-loader": "^1.2.2",
     "sass-loader": "^3.1.2",
-    "node-sass": "^3.4.2",
+    "node-sass": "^4.11.0",
     "eslint": "^3.2.2",
     "eslint-config-xo-space": "^0.12.0",
     "eslint-config-angular": "^0.5.0",

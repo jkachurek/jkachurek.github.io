@@ -6,15 +6,27 @@ namespace ExpCats {
 	export const ENGAGEMENT = 'engagement';
 }
 const ResumeDb: Array<Experience> = [
+	new Experience(ExpCats.WORK, 'Insight2Profit',
+		'Application Developer',
+		'April 2018 - Present',
+		[
+			'Lead front-end developer for our CPQ application built with React & Redux',
+			'Support & bug fixes for legacy application built with Knockout',
+			'Reworking the React application to work with new services architecture built around MongoDB',
+			'Building a reusable UI component library to help us quickly make custom CPQ front ends for clients',
+			'Specific technologies used: React, Redux, Styled Components, Jasmine, Karma, Webpack, SASS, Webpack, MongoDB, Knockout, jQuery',
+			'Tools used: Visual Studio, VS Code, SSMS, Postman, MongoDB Compass'
+		]
+	),
 	new Experience(ExpCats.WORK, 'AmTrust Financial Services',
 		'Software Engineer I',
-		'August 2016 - Present',
+		'August 2016 - March 2018',
 		[
 			'Working across the stack with a variety of enterprise .NET web applications, with a focus on the front end.',
 			'Building functionality of agent-facing web apps using Angular, jQuery, & ASP.NET MVC.',
 			'Creating RESTful APIs and connecting them to front ends.',
 			'Refactoring applications to use modern, component-based front ends.',
-			'Specific technologies used: ASP.NET MVC, WebAPI, Angular 1.6.x, jQuery, SQL Server, Web Forms',
+			'Specific technologies used: ASP.NET MVC, WebAPI, Angular 1.6.x, jQuery, SQL Server',
 			'Tools used: Visual Studio, Visual Studio Code, SQL Server Management Studio, Postman'
 		]
 	),
@@ -64,19 +76,18 @@ const ResumeDb: Array<Experience> = [
 	),
 	new Experience(ExpCats.ENGAGEMENT, 'Global Game Jam',
 		null,
-		'2017',
+		'2017 - present',
 		[
-			'Participated at the event hosted by Cleveland Game Devs',
-			'Created a simple game with Unity in two days',
-			'Worked as one of two programmers along with a designer and musician',
-			'See the Projects page for more info'
+			'I participate in the annual jam hosted by Cleveland Game Devs',
+			'Worked on teams to create games in Unity over the course of two days each January',
+			'See the Projects page for more info on the games that I have made'
 		]
 	),
 	new Experience(ExpCats.ENGAGEMENT, 'RailsBridge',
 		null,
 		'2016',
 		[
-			'Participated in 2016\'s RailsBridge event in Cleveland, hosted by CoverMyMeds',
+			'Participated in 2016\'s RailsBridge event in Cleveland',
 			'Learned the basics of setting up a Ruby On Rails dev environment, scaffolding, building, and deploying a small web app.'
 		]
 	),

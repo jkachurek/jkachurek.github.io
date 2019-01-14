@@ -8,17 +8,17 @@ module SkillCategories {
 }
 
 const SkillDb: Array<Skill> = [
-	new Skill('Angular 1.x', 9, SkillCategories.FRAMEWORK,
+	new Skill('Angular 1.x', 7, SkillCategories.FRAMEWORK,
 		`I have used AngularJS extensively in personal and work projects.  I have used versions betweeen 1.3.x and 1.6.x,
 			so I am comfortable with a wide range of standards for the framework.  My projects using it have included complex
 			insurance applications, simple websites (like this one), and even browser games like my Cult Simulator
 			project (see the Projects page for details).`
 	),
-	new Skill('Angular 2+', 7, SkillCategories.FRAMEWORK,
+	new Skill('Angular 2+', 5, SkillCategories.FRAMEWORK,
 		`I have not worked with modern Angular as much as I have with Angular 1.x,
 			but I am still very comfortable with it.  I have used it for a complex
 			web application at work and for multiple side projects.  In addition,
-			as you can read below, I have used it in conjunction with Redux.`
+			I have used it in conjunction with Redux.`
 	),
 	new Skill('.NET', 6, SkillCategories.FRAMEWORK,
 		`I have used the .NET Framework almost exclusively for the purpose of making web applications,
@@ -31,26 +31,26 @@ const SkillDb: Array<Skill> = [
 		I am mostly comfortable with this due to its similarity to the regular .NET Framework, and how
 		well it works with the Node ecosystem.`
 	),
-	new Skill('Redux', 6, SkillCategories.FRAMEWORK,
-		`I have worked with angular-redux, the implementation of Redux for
-			Angular 2+, on work projects and am comfortable with its core
-			concepts and how to implement them in a complex application.
-			Most recently, I used Redux to create an insurance quoting
-			application that includes a multi-step workflow with generic
-			presentational components for each page.
-			I hope to use Redux with React in more advanced applications
-			in the near future.`
+	new Skill('React', 9, SkillCategories.FRAMEWORK,
+		`
+			I use React daily for my job and am extremely comfortable in its ecosystem.  As time permits,
+			I am working on transitioning this site to use React rather than Angular.  I am also
+			working on getting comfortable with the Hooks API introduced in the 16.8 alpha.  I regularly use
+			React with React-Redux, Styled Components, React Router, Storybook, Jest, and Axios, among others.
+		`
 	),
-	new Skill('C#', 8, SkillCategories.LANGUAGE,
+	new Skill('Redux', 9, SkillCategories.FRAMEWORK,
+		`I have worked with Redux in both React and Angular, but mostly in React.  I am comfortable with several related libraries, including thunk, redux-saga, redux-forms, and reselect.`
+	),
+	new Skill('C#', 6, SkillCategories.LANGUAGE,
 		`I am very comfortable with C# for web applications and architecture.  I am still learning
 			more about using C# to develop more complex backend functionality, and to create non-web
 			applications.`
 	),
-	new Skill('JavaScript', 8, SkillCategories.LANGUAGE,
-		`This being the modern era, I use JavaScript daily at work and on side projects.  I am comfortable with
-			vanilla JS as well as more recent specs like ES6.  I have spent time creating several reusable bits of
-			code to extend JS's functionality, including new methods of manipulating callbacks, URL parameters,
-			object properties, and more.`
+	new Skill('JavaScript', 10, SkillCategories.LANGUAGE,
+		`I use JavaScript daily at work and on side projects, mostly with React.  I am comfortable
+			with vanilla JS as well as more recent specs like ES6.  I enjoy writing utility functions
+			in vanilla JS to extend its functionality in ways that are framework-agnostic.`
 	),
 	new Skill('TypeScript', 8, SkillCategories.LANGUAGE,
 		`I have used TypeScript mostly on personal projects, including this website and the Cult Simulator.
@@ -58,16 +58,12 @@ const SkillDb: Array<Skill> = [
 			especially useful because it makes it very easy to transition a codebase into C#, for example
 			if I wanted to move a game from an HTML game to being made in Unity.`
 	),
-	new Skill('SQL', 5, SkillCategories.LANGUAGE,
+	new Skill('SQL', 3, SkillCategories.LANGUAGE,
 		`I am proficient at using SQL for basic data access purposes, but have not worked with it extensively
 			to perform complex operations and queries.`
 	),
-	new Skill('CSS', 6, SkillCategories.LANGUAGE,
-		`I am comfortable with basic CSS for web pages, and have used it throughout
-			my personal projects.  I typically use Bootstrap on sites (like this one) to speed
-			up the development process.  I am in the process of learning how to use Flexbox
-			effectively, and will try to use that once I am comfortable with it.  I am also
-			comfortable using SASS.`
+	new Skill('CSS / SASS', 7, SkillCategories.LANGUAGE,
+		`I use CSS and SASS regularly for work and personal projects.  I am comfortable with making adjustments to styling and adding basic styles to components, but I have not had the opportunity to build a full, custom UI from the ground up.  I am hoping to get more experience with this soon.  I am also working on getting more comfortable with modern specs like Flexbox and CSS Grids.`
 	),
 	new Skill('Visual Studio', 7, SkillCategories.TOOL,
 		`I use Visual Studio daily at work because of its ability to manage and build multiple large
@@ -91,9 +87,9 @@ const SkillDb: Array<Skill> = [
 			applications.  I have not used many of its more robust features, but am
 			comfortable performing basic operations with it.`
 	),
-	new Skill('Unity 5.x', 5, SkillCategories.TOOL,
+	new Skill('Unity 5.x', 3, SkillCategories.TOOL,
 		`I have done several tutorials and smaller projects with Unity.  I also used it for my Global
-			Game Jam 2017 submission, which can be seen on my Projects page.  Though I have not produced
+			Game Jam submissions in 2017 and 2018, which can be seen on my Projects page.  Though I have not produced
 			a large project with it, I have a solid understanding of the scripting API thanks
 			to my knowledge of C#.  I still have much to learn about the Unity Editor itself,
 			especially since the more artistic uses of it (animation, spritesheets, materials, etc.)
