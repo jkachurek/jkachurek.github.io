@@ -6,9 +6,19 @@ namespace ExpCats {
 	export const ENGAGEMENT = 'engagement';
 }
 const ResumeDb: Array<Experience> = [
+	new Experience(ExpCats.WORK, 'Rexel USA (Platt Electric)',
+		'Front-End Developer Developer',
+		'April 2019 - November 2019',
+		[
+			'7-month contract with Rexel USA through Randstad Technologies',
+			'Worked primarily on internal CRM and CPQ applications built with Vue, Vuex, & Vuetify',
+			'Spearheaded development of internal UI library using Storybook',
+			'Specific technologies used: Vue, Vuex, Vue Router, Vuetify, Storybook, Nuxt, Jest, Webpack, Stylus'
+		]
+	),
 	new Experience(ExpCats.WORK, 'Insight2Profit',
 		'Application Developer',
-		'April 2018 - Present',
+		'April 2018 - March 2019',
 		[
 			'Lead front-end developer for our CPQ application built with React & Redux',
 			'Support & bug fixes for legacy application built with Knockout',

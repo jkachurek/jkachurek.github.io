@@ -42,6 +42,9 @@ const SkillDb: Array<Skill> = [
 	new Skill('Redux', 9, SkillCategories.FRAMEWORK,
 		`I have worked with Redux in both React and Angular, but mostly in React.  I am comfortable with several related libraries, including thunk, redux-saga, redux-forms, and reselect.`
 	),
+	new Skill('Vue', 7, SkillCategories.FRAMEWORK,
+		`I worked professionally with Vue and Vuetify for seven months, working on CPQ and CRM applications, as well as an internal UI library. I also have some limited experience using Nuxt for server-side rendered web applications.`
+	),
 	new Skill('C#', 6, SkillCategories.LANGUAGE,
 		`I am very comfortable with C# for web applications and architecture.  I am still learning
 			more about using C# to develop more complex backend functionality, and to create non-web
